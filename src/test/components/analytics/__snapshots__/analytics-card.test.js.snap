@@ -292,7 +292,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                       <line
                         role="presentation"
                         shape-rendering="auto"
-                        style="stroke: var(--pf-chart-axis--axis--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--axis--Fill, transparent); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+                        style="stroke: #d2d2d2; fill: transparent; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
                         vector-effect="non-scaling-stroke"
                         x1="60"
                         x2="1004"
@@ -302,14 +302,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                       <text
                         direction="inherit"
                         dx="0"
-                        id="axis-axisLabel-0"
+                        id="chart-axis-0-axisLabel-0"
                         x="532"
                         y="206.97"
                       >
                         <tspan
                           dx="0"
                           dy="0"
-                          style="padding: 30px; font-size: 14px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; stroke: var(--pf-chart-axis--axis-label--stroke--Color, transparent); fill: var(--pf-chart-global--label--Fill, #151515); text-anchor: middle;"
+                          style="padding: 30px; font-size: 14px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; stroke: transparent; text-anchor: middle; fill: #252525;"
                           text-anchor="middle"
                           x="532"
                         >
@@ -322,7 +322,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="242.75314283074016"
                           x2="242.75314283074016"
@@ -332,14 +332,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-0-ChartLabel-0"
+                          id="chart-axis-0-tickLabels-0"
                           x="242.75314283074016"
                           y="188.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: middle;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="middle"
                             x="242.75314283074016"
                           >
@@ -353,7 +353,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="425.5062856614803"
                           x2="425.5062856614803"
@@ -363,14 +363,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-0-ChartLabel-1"
+                          id="chart-axis-0-tickLabels-1"
                           x="425.5062856614803"
                           y="188.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: middle;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="middle"
                             x="425.5062856614803"
                           >
@@ -384,7 +384,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="608.2594284922204"
                           x2="608.2594284922204"
@@ -394,14 +394,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-0-ChartLabel-2"
+                          id="chart-axis-0-tickLabels-2"
                           x="608.2594284922204"
                           y="188.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: middle;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="middle"
                             x="608.2594284922204"
                           >
@@ -415,7 +415,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="791.0125713229606"
                           x2="791.0125713229606"
@@ -425,14 +425,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-0-ChartLabel-3"
+                          id="chart-axis-0-tickLabels-3"
                           x="791.0125713229606"
                           y="188.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: middle;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="middle"
                             x="791.0125713229606"
                           >
@@ -446,7 +446,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="973.7657141537007"
                           x2="973.7657141537007"
@@ -456,14 +456,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-0-ChartLabel-4"
+                          id="chart-axis-0-tickLabels-4"
                           x="973.7657141537007"
                           y="188.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: middle;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="middle"
                             x="973.7657141537007"
                           >
@@ -478,7 +478,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                       <line
                         role="presentation"
                         shape-rendering="auto"
-                        style="stroke: var(--pf-chart-axis--axis--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--axis--Fill, transparent); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+                        style="stroke: #d2d2d2; fill: transparent; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
                         vector-effect="non-scaling-stroke"
                         x1="60"
                         x2="60"
@@ -488,7 +488,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                       <text
                         direction="inherit"
                         dx="0"
-                        id="axis-axisLabel-0"
+                        id="chart-axis-1-axisLabel-0"
                         transform="rotate(-90,15,92.5)"
                         x="15"
                         y="90.47"
@@ -496,7 +496,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <tspan
                           dx="0"
                           dy="0"
-                          style="padding: 45px; font-size: 14px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; stroke: var(--pf-chart-axis--axis-label--stroke--Color, transparent); fill: var(--pf-chart-global--label--Fill, #151515); text-anchor: middle;"
+                          style="padding: 45px; font-size: 14px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; stroke: transparent; text-anchor: middle; fill: #252525;"
                           text-anchor="middle"
                           x="15"
                         >
@@ -509,7 +509,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--grid--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--grid--Fill, none); pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
+                          style="stroke: #d2d2d2; fill: none; pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="1004"
@@ -519,7 +519,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="55"
@@ -529,14 +529,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-1-ChartLabel-0"
+                          id="chart-axis-1-tickLabels-0"
                           x="45"
                           y="139.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: end;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="end"
                             x="45"
                           >
@@ -550,7 +550,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--grid--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--grid--Fill, none); pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
+                          style="stroke: #d2d2d2; fill: none; pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="1004"
@@ -560,7 +560,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="55"
@@ -570,14 +570,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-1-ChartLabel-1"
+                          id="chart-axis-1-tickLabels-1"
                           x="45"
                           y="110.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: end;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="end"
                             x="45"
                           >
@@ -591,7 +591,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--grid--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--grid--Fill, none); pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
+                          style="stroke: #d2d2d2; fill: none; pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="1004"
@@ -601,7 +601,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="55"
@@ -611,14 +611,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-1-ChartLabel-2"
+                          id="chart-axis-1-tickLabels-2"
                           x="45"
                           y="81.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: end;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="end"
                             x="45"
                           >
@@ -632,7 +632,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--grid--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--grid--Fill, none); pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
+                          style="stroke: #d2d2d2; fill: none; pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="1004"
@@ -642,7 +642,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="55"
@@ -652,14 +652,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-1-ChartLabel-3"
+                          id="chart-axis-1-tickLabels-3"
                           x="45"
                           y="52.54999999999999"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: end;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="end"
                             x="45"
                           >
@@ -673,7 +673,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--grid--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--grid--Fill, none); pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
+                          style="stroke: #d2d2d2; fill: none; pointer-events: painted; stroke-linecap: round; stroke-linejoin: round;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="1004"
@@ -683,7 +683,7 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <line
                           role="presentation"
                           shape-rendering="auto"
-                          style="stroke: var(--pf-chart-axis--tick--stroke--Color, #d2d2d2); fill: var(--pf-chart-axis--tick--Fill, transparent); size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
+                          style="stroke: #d2d2d2; fill: transparent; size: 5px; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;"
                           vector-effect="non-scaling-stroke"
                           x1="60"
                           x2="55"
@@ -693,14 +693,14 @@ exports[`<AnalyticsCard /> should render correctly 1`] = `
                         <text
                           direction="inherit"
                           dx="0"
-                          id="chart-axis-1-ChartLabel-4"
+                          id="chart-axis-1-tickLabels-4"
                           x="45"
                           y="23.55"
                         >
                           <tspan
                             dx="0"
                             dy="0"
-                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: var(--pf-chart-global--label--stroke, transparent); fill: var(--pf-chart-axis--tick-label--Fill, #4f5255); text-anchor: end;"
+                            style="font-size: 10px; font-family: \\"RedHatText\\",\\"Overpass\\",overpass,helvetica,arial,sans-serif; letter-spacing: normal; padding: 10px; stroke: transparent; fill: #4f5255;"
                             text-anchor="end"
                             x="45"
                           >
@@ -726,7 +726,7 @@ A 0 0 0 0 1, 976.8297785154242, 165
                           index="0"
                           role="presentation"
                           shape-rendering="auto"
-                          style="fill: #38812f; stroke: var(--pf-chart-bar--data--stroke, none); stroke-width: 1; padding: 8px;"
+                          style="fill: #38812f; stroke: none; stroke-width: 1; padding: 8px;"
                         />
                       </g>
                       <g
@@ -745,7 +745,7 @@ A 0 0 0 0 1, 976.8297785154242, 165
                           index="0"
                           role="presentation"
                           shape-rendering="auto"
-                          style="fill: #7d1007; stroke: var(--pf-chart-bar--data--stroke, none); stroke-width: 1; padding: 8px;"
+                          style="fill: #7d1007; stroke: none; stroke-width: 1; padding: 8px;"
                         />
                       </g>
                     </g>
