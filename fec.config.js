@@ -4,7 +4,7 @@ module.exports = {
     proxyVerbose: true,
     appUrl: ['/ansible/ansible-dashboard/', '/ansible/ansible-dashboard'],
     plugins: [],
-  
+
     moduleFederation: {
       exclude: ['react-router-dom'],
       shared: [
