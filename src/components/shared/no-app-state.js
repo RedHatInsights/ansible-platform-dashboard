@@ -9,7 +9,7 @@ const renderButtons = (intl) => (
   <Flex>
     <FlexItem>
       <Button
-        isLarge
+        size="lg"
         component='a'
         variant='primary'
         href={ `https://www.redhat.com/en/technologies/management/ansible/try-it` }>
@@ -19,7 +19,7 @@ const renderButtons = (intl) => (
     <FlexItem>
       <Button
         component='a'
-        isLarge
+        size="lg"
         variant='link'
         target='_blank'
         rel='noreferrer'

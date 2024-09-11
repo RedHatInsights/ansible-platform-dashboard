@@ -12,7 +12,7 @@ const renderButtons = (intl) => (
   <Flex>
     <FlexItem>
       <Button
-        isLarge
+        size="lg"
         component='a'
         variant='primary'
         target="_blank"

@@ -80,7 +80,7 @@ const AnalyticsCard = () => {
             className={ 'pf-m-small' }
             color="red"
             icon={ <InfoCircleIcon/> }
-            isTruncated
+            
             href={ `${release}ansible/automation-analytics/notifications?default.severity=error` }
           >
             { intl.formatMessage(messages.critical) }
@@ -92,7 +92,7 @@ const AnalyticsCard = () => {
           <Label
             color="orange"
             icon={ <WarningTriangleIcon/> }
-            isTruncated
+            
             href={ `${release}ansible/automation-analytics/notifications?default.severity=warning` }
           >
             { intl.formatMessage(messages.warning) }
@@ -163,7 +163,7 @@ const AnalyticsCard = () => {
       return (
         <Section style={ { backgroundColor: 'white', minHeight: '100%' } }>
           <Bullseye>
-            <Spinner isSVG />
+            <Spinner  />
           </Bullseye>
         </Section>
       );

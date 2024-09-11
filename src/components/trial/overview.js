@@ -122,7 +122,7 @@ const Overview = () => {
               { intl.formatMessage(trialMessages.faqTitle) }
             </CardTitle>
           </Card>
-          <Accordion isBordered displaySize="large">
+          <Accordion isBordered displaySize="lg">
             { createAccordionItem(1, {
               a: (chunks) => <Link link="https://access.redhat.com/">{ chunks }</Link>
             }) }

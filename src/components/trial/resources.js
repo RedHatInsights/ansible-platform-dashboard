@@ -38,7 +38,7 @@ const Resources = () => {
             { intl.formatMessage(successMessages.instructionsText) }
           </CardBody>
           <CardFooter>
-            <Button variant="link" isLarge isInline component="a" href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index" target="_blank" rel="noopener noreferrer">
+            <Button variant="link" size="lg" isInline component="a" href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index" target="_blank" rel="noopener noreferrer">
               { intl.formatMessage(successMessages.instructionsLink) } <ArrowRightIcon />
             </Button>
           </CardFooter>
@@ -50,7 +50,7 @@ const Resources = () => {
             { intl.formatMessage(successMessages.documentationText) }
           </CardBody>
           <CardFooter>
-            <Button variant="link" isLarge isInline component="a" href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4" target="_blank" rel="noopener noreferrer">
+            <Button variant="link" size="lg" isInline component="a" href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4" target="_blank" rel="noopener noreferrer">
               { intl.formatMessage(successMessages.documentationLink) } <ArrowRightIcon />
             </Button>
           </CardFooter>
@@ -62,7 +62,7 @@ const Resources = () => {
             { intl.formatMessage(successMessages.otherVersionsText) }
           </CardBody>
           <CardFooter>
-            <Button variant="link" isLarge isInline component="a" href="https://access.redhat.com/downloads/content/480" target="_blank" rel="noopener noreferrer">
+            <Button variant="link" size="lg" isInline component="a" href="https://access.redhat.com/downloads/content/480" target="_blank" rel="noopener noreferrer">
               { intl.formatMessage(successMessages.otherVersionsLink) } <ArrowRightIcon />
             </Button>
           </CardFooter>
@@ -74,7 +74,7 @@ const Resources = () => {
             { intl.formatMessage(successMessages.customerServiceText) }
           </CardBody>
           <CardFooter>
-            <Button variant="link" isLarge isInline component="a" href="https://www.redhat.com/en/contact?contact=customer-service#tab.contact-method.1" target="_blank" rel="noopener noreferrer">
+            <Button variant="link" size="lg" isInline component="a" href="https://www.redhat.com/en/contact?contact=customer-service#tab.contact-method.1" target="_blank" rel="noopener noreferrer">
               { intl.formatMessage(successMessages.customrServiceLink) } <ArrowRightIcon />
             </Button>
           </CardFooter>

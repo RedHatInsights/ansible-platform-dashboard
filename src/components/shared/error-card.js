@@ -5,8 +5,8 @@ import {
   Card,
   EmptyState,
   EmptyStateBody,
-  EmptyStateIcon,
-  Title
+  EmptyStateIcon, EmptyStateHeader,
+  
 } from '@patternfly/react-core';
 import { global_danger_color_200 } from '@patternfly/react-tokens';
 import { useIntl } from 'react-intl';
@@ -26,7 +26,7 @@ const ErrorCard = () => {
             color={ global_danger_color_200.value }
           />
         </div>
-        <Title headingLevel="h2" size="md"> { intl.formatMessage(messages.errorStateTitle) } </Title>
+        <EmptyStateHeader titleText={<>{ intl.formatMessage(messages.errorStateTitle) }</>} headingLevel="h2" />
 
         <EmptyStateBody className='ans-c-empty-state-error__body'>
           { intl.formatMessage(messages.errorStateDescription, { supportLink: <a href={ 'https://access.redhat.com/support' }>Red Hat support</a>,

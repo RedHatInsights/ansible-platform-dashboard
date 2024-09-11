@@ -290,7 +290,7 @@ const HubCard = () => {
       return (
         <Section style={ { backgroundColor: 'white', minHeight: '100%' } }>
           <Bullseye>
-            <Spinner isSVG />
+            <Spinner  />
           </Bullseye>
         </Section>
       );
