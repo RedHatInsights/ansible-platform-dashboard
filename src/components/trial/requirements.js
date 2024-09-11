@@ -58,7 +58,7 @@ const Requirements = ({ afterTrial }) => {
                 { intl.formatMessage(trialMessages.reqCardBreakTitle) }
               </Title>
               { intl.formatMessage(startInstallText, {
-                a: (chunks) => <Link link="https://console.redhat.com/ansible/automation-hub">{ chunks }</Link>
+                a1: (chunks) => <Link link="https://console.redhat.com/ansible/automation-hub">{ chunks }</Link>
               }) }
             </TextContent>
           </div>
