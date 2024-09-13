@@ -16,7 +16,7 @@ const pathName = window.location.pathname.split('/');
 pathName.shift();
 
 const App = () => {
-  let APPLICATION_NAME = 'automation-dashboard';
+  const APPLICATION_NAME = 'automation-dashboard';
 
   const [ userPermissions, setUserPermissions ] = useState();
   const [ userIdentity, setUserIdentity ] = useState();
@@ -31,7 +31,7 @@ const App = () => {
 
   if (!userIdentity) {
     return <AppPlaceholder />;
-  };
+  }
 
   return (
     <UserContext.Provider

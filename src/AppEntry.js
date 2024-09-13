@@ -5,7 +5,7 @@ import App from './App';
 import PropTypes from 'prop-types';
 
 const AppEntry = () => (<Provider store={ store([]) }>
-    <App/>
+  <App/>
 </Provider>
 );
 

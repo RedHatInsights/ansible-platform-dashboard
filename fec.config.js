@@ -11,5 +11,5 @@ module.exports = {
     shared: [
       { 'react-router-dom': { singleton: true, version: '*', import: false }}
     ]
-  },
+  }
 };

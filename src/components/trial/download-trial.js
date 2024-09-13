@@ -17,7 +17,7 @@ const downloadTrial = async (cheksum) => {
 
     downloadFile(url.body.href);
   } catch (e) {
-    console.error(e);
+    // console.error(e);
   }
 };
 

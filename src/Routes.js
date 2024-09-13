@@ -11,8 +11,8 @@ const TrialExpired = lazy(() => import(/* webpackChunkName: 'ansible-dashboard-r
 
 export const Routes = () => <RouterRoutes>
   <Route path={ TRIAL_SUCCESS_ROUTE } element={ <TrialSuccess /> }/>
-  <Route path={ TRIAL_EXPIRED_ROUTE } element={ <TrialExpired  />}/>
-  <Route path={ TRIAL_ROUTE } element={ <TrialOverview />}/>
+  <Route path={ TRIAL_EXPIRED_ROUTE } element={ <TrialExpired  /> }/>
+  <Route path={ TRIAL_ROUTE } element={ <TrialOverview /> }/>
   <Route path={ DASHBOARD_ROUTE } element={ <Dashboard/> }/>
   <Route path={ '*' } element={ <Error404/> }/>
 </RouterRoutes>;

@@ -80,7 +80,6 @@ const AnalyticsCard = () => {
             className={ 'pf-v5-m-small' }
             color="red"
             icon={ <InfoCircleIcon/> }
-            
             href={ `${release}ansible/automation-analytics/notifications?default.severity=error` }
           >
             { intl.formatMessage(messages.critical) }
@@ -92,7 +91,6 @@ const AnalyticsCard = () => {
           <Label
             color="orange"
             icon={ <WarningTriangleIcon/> }
-            
             href={ `${release}ansible/automation-analytics/notifications?default.severity=warning` }
           >
             { intl.formatMessage(messages.warning) }
