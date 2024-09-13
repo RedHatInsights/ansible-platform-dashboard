@@ -88,22 +88,22 @@ const HubCard = () => {
         </Text>
       </TextContent>
       <Flex>
-        <Flex direction={ { default: 'column' } } className="pf-u-m-0 pf-u-pr-sm">
-          <FlexItem align={ { default: 'alignRight' } } className="pf-u-mb-sm pf-u-mt-md">
+        <Flex direction={ { default: 'column' } } className="pf-v5-u-m-0 pf-v5-u-pr-sm">
+          <FlexItem align={ { default: 'alignRight' } } className="pf-v5-u-mb-sm pf-v5-u-mt-md">
             <TextContent>
               <Text component={ TextVariants.h1 }>
                 { partners?.meta?.count }
               </Text>
             </TextContent>
           </FlexItem>
-          <FlexItem align={ { default: 'alignRight' } } className="pf-u-mb-sm pf-u-mt-md">
+          <FlexItem align={ { default: 'alignRight' } } className="pf-v5-u-mb-sm pf-v5-u-mt-md">
             <TextContent>
               <Text component={ TextVariants.h1 }>
                 { collections?.meta?.count }
               </Text>
             </TextContent>
           </FlexItem>
-          <FlexItem align={ { default: 'alignRight' } } className="pf-u-mb-sm pf-u-mt-md">
+          <FlexItem align={ { default: 'alignRight' } } className="pf-v5-u-mb-sm pf-v5-u-mt-md">
             <TextContent>
               <Text component={ TextVariants.h1 }>
                 { syncCollections?.meta?.count }
@@ -129,7 +129,7 @@ const HubCard = () => {
             </Button>
           </FlexItem>
           <FlexItem>
-            <Level hasGutter className="pf-u-pl-md pf-u-pt-sm">
+            <Level hasGutter className="pf-v5-u-pl-md pf-v5-u-pt-sm">
               <LevelItem style={ { marginRight: 8 } }>
                 { intl.formatMessage(messages.syncCollections) }
               </LevelItem>
@@ -189,7 +189,7 @@ const HubCard = () => {
             <Button
               component='a'
               variant='link'
-              className="pf-u-p-0"
+              className="pf-v5-u-p-0"
               href={ `${release}ansible/automation-hub/repo/published/${featuredCollection?.namespace?.name}/` +
                   `${featuredCollection?.latest_version?.name || featuredCollection?.name}` }>
               { featuredCollection?.latest_version?.name || featuredCollection?.name }
@@ -262,7 +262,7 @@ const HubCard = () => {
               </Text>
             </StackItem>
             <StackItem>
-              <Text className="pf-u-text-align-center">
+              <Text className="pf-v5-u-text-align-center">
                 <br /><br />
                 <Button
                   component='a'

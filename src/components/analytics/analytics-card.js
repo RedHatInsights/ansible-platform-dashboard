@@ -66,7 +66,7 @@ const AnalyticsCard = () => {
 
   const renderAnalyticsNotifications = () => {
     return <React.Fragment>
-      <DescriptionList className="pf-c-description-list.pf-m-vertical" columnModifier={ {
+      <DescriptionList className="pf-v5-c-description-list.pf-v5-m-vertical" columnModifier={ {
         default: '2Col'
       } }>
         <Title headingLevel="h4">
@@ -77,7 +77,7 @@ const AnalyticsCard = () => {
           { errorNotifications?.payload?.meta?.count || 0 }
           <p />
           <Label
-            className={ 'pf-m-small' }
+            className={ 'pf-v5-m-small' }
             color="red"
             icon={ <InfoCircleIcon/> }
             
@@ -113,7 +113,7 @@ const AnalyticsCard = () => {
             <br/>
           </FlexItem>
           <FlexItem>
-            <DescriptionList className="pf-c-description-list.pf-m-vertical" columnModifier={ {
+            <DescriptionList className="pf-v5-c-description-list.pf-v5-m-vertical" columnModifier={ {
               default: '1Col'
             } }>
               <Title headingLevel="h4">
@@ -139,10 +139,10 @@ const AnalyticsCard = () => {
       </Title>
       <br/>
       <Flex direction={ { default: 'column' } }>
-        <FlexItem className="pf-u-m-0">
+        <FlexItem className="pf-v5-u-m-0">
           <JobsChart items={ jobsData?.payload?.items }/>
         </FlexItem>
-        <FlexItem className="pf-u-m-0 pf-u-pt-0 pf-u-pb-0 pf-u-pl-lg" >
+        <FlexItem className="pf-v5-u-m-0 pf-v5-u-pt-0 pf-v5-u-pb-0 pf-v5-u-pl-lg" >
           <Bullseye>
             <Button
               component='a'
@@ -202,7 +202,7 @@ const AnalyticsCard = () => {
               { intl.formatMessage(messages.analyticsTitle) }
             </Title>
           </CardTitle>
-          <CardBody className="pf-u-pb-sm">
+          <CardBody className="pf-v5-u-pb-sm">
             { renderAnalyticsCards() }
           </CardBody>
         </Card>
