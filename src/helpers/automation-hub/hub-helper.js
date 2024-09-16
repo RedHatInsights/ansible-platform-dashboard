@@ -4,7 +4,7 @@ const axiosInstance = getAxiosInstance();
 
 export const getCollections = () =>
   axiosInstance.get(
-    `/api/automation-hub/v3/collections?deprecated=false&&limit=31`,
+    `/api/automation-hub/v3/plugin/ansible/content/published/collections/index/?deprecated=false&limit=31`,
   );
 
 export const getCollection = (offset) =>
@@ -13,9 +13,9 @@ export const getCollection = (offset) =>
   );
 
 export const getPartners = () =>
-  axiosInstance.get(`/api/automation-hub/v3/namespaces?limit=1`);
+  axiosInstance.get(`/api/automation-hub/v3/namespaces/?limit=1`);
 
 export const getSyncCollections = (account) =>
   axiosInstance.get(
-    `/api/automation-hub/content/${account}-synclist/v3/collections?limit=1&deprecated=false`,
+    `/api/automation-hub/content/${account}-synclist/v3/plugin/ansible/content/${account}-synclist/collections/index/?deprecated=false&limit=1`,
   );
