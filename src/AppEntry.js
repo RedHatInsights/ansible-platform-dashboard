@@ -14,4 +14,5 @@ AppEntry.propTypes = {
   logger: PropTypes.func,
 };
 
+// imported directly by fec
 export default AppEntry;
