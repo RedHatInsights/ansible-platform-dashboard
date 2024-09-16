@@ -47,7 +47,7 @@ const expiredMessages = defineMessages({
     defaultMessage: 'Contact sales'
   },
   partners: {
-    id: 'expired.xxx',
+    id: 'expired.partners',
     defaultMessage: 'Partners'
   },
   partnersText: {
@@ -58,10 +58,6 @@ const expiredMessages = defineMessages({
     id: 'expired.partnersButton',
     defaultMessage: 'Find a partner'
   },
-  xxx: {
-    id: 'expired.xxx',
-    defaultMessage: 'xxx'
-  }
 });
 
 export default expiredMessages;
