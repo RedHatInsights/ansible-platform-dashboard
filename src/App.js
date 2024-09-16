@@ -25,7 +25,7 @@ const App = () => {
     updateDocumentTitle(APPLICATION_NAME);
     auth.getUser().then((data) => setUserIdentity(data));
     getUserPermissions(APPLICATION_NAME).then((data) =>
-      setUserPermissions(data)
+      setUserPermissions(data),
     );
   }, []);
 

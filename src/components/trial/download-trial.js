@@ -12,7 +12,7 @@ const downloadTrial = async (cheksum) => {
           Authorization: `Bearer ${token}`,
           Accept: 'application/vnd.rhsm.noredirect+json',
         },
-      }
+      },
     );
 
     downloadFile(url.body.href);

@@ -14,7 +14,7 @@ const useFormatMessage = () => {
               : value,
         };
       },
-      {}
+      {},
     );
     try {
       return formatMessage(message, internalValues);

@@ -71,7 +71,7 @@ const ConfigureAppPage = () => {
                 <ConfigureCard
                   title={intl.formatMessage(messages.configureAnalyticsTitle)}
                   description={intl.formatMessage(
-                    messages.configureAnalyticsDescription
+                    messages.configureAnalyticsDescription,
                   )}
                   renderButtons={() => renderAnalyticsConfigButton(intl)}
                 />

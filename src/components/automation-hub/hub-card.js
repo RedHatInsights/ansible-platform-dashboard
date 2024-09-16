@@ -66,7 +66,7 @@ const HubCard = () => {
           syncCollections,
           partners,
         },
-      }) => ({ isError, collection, collections, syncCollections, partners })
+      }) => ({ isError, collection, collections, syncCollections, partners }),
     );
 
   const { userIdentity } = useContext(UserContext);
@@ -90,7 +90,7 @@ const HubCard = () => {
       const count = collections?.meta?.count;
       stateDispatch({ type: 'setFetching', payload: true });
       dispatch(fetchCollection(count <= day ? count - 1 : day - 1)).then(() =>
-        stateDispatch({ type: 'setFetching', payload: false })
+        stateDispatch({ type: 'setFetching', payload: false }),
       );
     }
   }, [collections]);
@@ -189,7 +189,8 @@ const HubCard = () => {
   const filterContents = (contents) => {
     if (contents) {
       return contents.filter(
-        (item) => !['doc_fragments', 'module_utils'].includes(item.content_type)
+        (item) =>
+          !['doc_fragments', 'module_utils'].includes(item.content_type),
       );
     }
 
@@ -200,7 +201,9 @@ const HubCard = () => {
     const featuredCollection = collection?.data ? collection?.data[0] : null;
     const content = featuredCollection
       ? contentCounts(
-          filterContents(featuredCollection?.latest_version?.metadata?.contents)
+          filterContents(
+            featuredCollection?.latest_version?.metadata?.contents,
+          ),
         )
       : undefined;
     return (
@@ -317,7 +320,7 @@ const HubCard = () => {
             <StackItem>
               <Text component={TextVariants.p}>
                 {intl.formatMessage(
-                  messages.hubCardCertifiedCollectionDescription
+                  messages.hubCardCertifiedCollectionDescription,
                 )}
               </Text>
             </StackItem>

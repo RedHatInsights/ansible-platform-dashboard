@@ -19,7 +19,7 @@ const MarketingBanner = ({
     { [`ans-m-with-graphic `]: hasGraphic },
     { [`ans-m-graphic-right`]: graphicRight },
     { [`ans-m-light-1000 pf-m-light-1000`]: light1000 },
-    { [`ans-m-full-bleed`]: fullBleed }
+    { [`ans-m-full-bleed`]: fullBleed },
   );
 
   return (

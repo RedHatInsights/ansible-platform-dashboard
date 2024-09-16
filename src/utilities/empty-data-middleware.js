@@ -9,10 +9,10 @@ const emptyDataMiddleware = () => (dispatch) => (action) => {
   ) {
     const noFilter = Object.prototype.hasOwnProperty.call(
       nextAction.meta,
-      'filters'
+      'filters',
     )
       ? Object.values(nextAction.meta?.filters || {}).every(
-          (value) => typeof value === 'undefined' || value.length === 0
+          (value) => typeof value === 'undefined' || value.length === 0,
         )
       : nextAction.meta?.filter?.length === 0;
 

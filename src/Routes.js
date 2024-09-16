@@ -8,25 +8,29 @@ import {
   TRIAL_SUCCESS_ROUTE,
 } from './constants/routes';
 
-const Dashboard = lazy(() =>
-  import(
-    /* webpackChunkName: 'ansible-dashboard-route' */ './components/dashboard/dashboard'
-  )
+const Dashboard = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'ansible-dashboard-route' */ './components/dashboard/dashboard'
+    ),
 );
-const TrialOverview = lazy(() =>
-  import(
-    /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/overview'
-  )
+const TrialOverview = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/overview'
+    ),
 );
-const TrialSuccess = lazy(() =>
-  import(
-    /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/success'
-  )
+const TrialSuccess = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/success'
+    ),
 );
-const TrialExpired = lazy(() =>
-  import(
-    /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/expired'
-  )
+const TrialExpired = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'ansible-dashboard-route' */ './components/trial/expired'
+    ),
 );
 
 export const Routes = () => (

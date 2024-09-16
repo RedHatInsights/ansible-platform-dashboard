@@ -49,7 +49,7 @@ const analyticsState = (state, action) => {
 const AnalyticsCard = () => {
   const [{ isFetching }, stateDispatch] = useReducer(
     analyticsState,
-    initialState
+    initialState,
   );
 
   const {
@@ -76,7 +76,7 @@ const AnalyticsCard = () => {
       errorNotifications,
       warningNotifications,
       jobsData,
-    })
+    }),
   );
 
   const dispatch = useDispatch();

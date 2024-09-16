@@ -14,11 +14,13 @@ const PlatformPage = () => {
   const { isAnalyticsAvailable } = useSelector(
     ({ analyticsReducer: { isAnalyticsAvailable } }) => ({
       isAnalyticsAvailable,
-    })
+    }),
   );
 
   const { isHubAvailable } = useSelector(
-    ({ hubReducer: { isHubAvailable: isHubAvailable } }) => ({ isHubAvailable })
+    ({ hubReducer: { isHubAvailable: isHubAvailable } }) => ({
+      isHubAvailable,
+    }),
   );
 
   if (!isAnalyticsAvailable && !isHubAvailable) {

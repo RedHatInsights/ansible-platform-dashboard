@@ -36,7 +36,7 @@ describe('downloadTrial', () => {
           Accept: 'application/vnd.rhsm.noredirect+json',
           Authorization: 'Bearer TOKEN123',
         },
-      }
+      },
     );
     expect(downloadFile.default).toHaveBeenCalledWith('superfile.com');
   });

@@ -10,12 +10,12 @@ const axiosInstance = getAxiosInstance();
 
 export const getCollections = () =>
   axiosInstance.get(
-    `${AUTOMATION_HUB_API_BASE}/collections?deprecated=false&&limit=31`
+    `${AUTOMATION_HUB_API_BASE}/collections?deprecated=false&&limit=31`,
   );
 
 export const getCollection = (offset) => {
   return axiosInstance.get(
-    `${AUTOMATION_HUB_UI_API_BASE}/repo/published/?deprecated=false&offset=${offset}&limit=1`
+    `${AUTOMATION_HUB_UI_API_BASE}/repo/published/?deprecated=false&offset=${offset}&limit=1`,
   );
 };
 
@@ -24,5 +24,5 @@ export const getPartners = () =>
 
 export const getSyncCollections = (account) =>
   axiosInstance.get(
-    `${AUTOMATION_HUB_BASE}/content/${account}-synclist/v3/collections?limit=1&deprecated=false`
+    `${AUTOMATION_HUB_BASE}/content/${account}-synclist/v3/collections?limit=1&deprecated=false`,
   );
