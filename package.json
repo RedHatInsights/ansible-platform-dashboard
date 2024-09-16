@@ -27,11 +27,6 @@
     "redux-promise-middleware": "^6.2.0",
     "redux-thunk": "^2.4.2"
   },
-  "sassIncludes": {
-    "patternfly": "node_modules/patternfly/dist/sass",
-    "bootstrap": "node_modules/patternfly/node_modules/bootstrap-sass/assets/stylesheets",
-    "fontAwesome": "node_modules/patternfly/node_modules/font-awesome-sass/assets/stylesheets"
-  },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
@@ -59,14 +54,11 @@
     "lint": "eslint src/ config/ *.config.js",
     "lint:fix": "eslint --fix src/ config/ *.config.js",
     "prettier": "prettier -w src/ config/ *.config.js",
-    "start": "fec dev",
+    "start": "fec dev --clouddotEnv=stage",
     "test": "jest --passWithNoTests --runInBand",
     "verify": "npm-run-all build lint test"
   },
   "insights": {
     "appname": "ansible-dashboard"
-  },
-  "sideEffects": [
-    "*.scss"
-  ]
+  }
 }
