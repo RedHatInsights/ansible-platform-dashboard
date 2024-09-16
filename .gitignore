@@ -23,3 +23,5 @@ coverage
 core
 *.sw[po]
 *~
+
+translations/

@@ -1,4 +1,3 @@
-/* eslint camelcase: 0 */
 import {
   AUTOMATION_HUB_API_BASE,
   AUTOMATION_HUB_BASE,

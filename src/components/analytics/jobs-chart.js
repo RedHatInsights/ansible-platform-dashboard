@@ -5,7 +5,7 @@ import {
   ChartStack,
   ChartTooltip,
 } from '@patternfly/react-charts';
-import c_content_small_FontSize from '@patternfly/react-tokens';
+import c_content_small_FontSize from '@patternfly/react-tokens/dist/js/c_content_small_FontSize';
 import chart_color_green_400 from '@patternfly/react-tokens/dist/js/chart_color_green_400';
 import chart_color_red_300 from '@patternfly/react-tokens/dist/js/chart_color_red_300';
 import React, { useEffect, useState } from 'react';

@@ -1,5 +1,4 @@
-/* eslint camelcase: 0 */
-import { stringify } from 'query-string';
+import queryString from 'query-string';
 import { getAxiosInstance } from '../shared/user-login';
 
 /* v0 endpoints */
@@ -29,7 +28,7 @@ export const getJobsData = () => {
     limit: 1,
     offset: 0,
   };
-  const qs = stringify(params);
+  const qs = queryString.stringify(params);
   const url = new URL(jobExplorerEndpoint, window.location.origin);
   url.search = qs;
   return authenticatedFetch(url, {

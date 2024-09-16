@@ -6,7 +6,7 @@ import {
   EmptyStateIcon,
 } from '@patternfly/react-core';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
-import { global_danger_color_200 } from '@patternfly/react-tokens';
+import global_danger_color_200 from '@patternfly/react-tokens/dist/js/global_danger_color_200';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useIntl } from 'react-intl';
