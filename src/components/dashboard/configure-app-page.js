@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
 import ConfigureCard from '../shared/configure-card';
 import HubCard from '../automation-hub/hub-card';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 const url = 'https://access.redhat.com/documentation/en-us';
 const extendedUrl = 'red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/index';
 const renderButtons = (intl) => (

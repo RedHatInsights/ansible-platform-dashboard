@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
-import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
 
 import DashboardHeader from '../shared/dashboard-header';
 import {

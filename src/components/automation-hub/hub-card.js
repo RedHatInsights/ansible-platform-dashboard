@@ -21,12 +21,12 @@ import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
 import { fetchCollection, fetchCollections, fetchPartners, fetchSyncCollections } from '../../redux/actions/hub-actions';
 import UserContext from '../../user-context';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import { contentCounts } from './content-counts';
 import { Logo } from './logo';
 import { release } from '../../utilities/app-history';
 import ErrorCard from '../shared/error-card';
-import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/js/icons/outlined-question-circle-icon';
+import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-question-circle-icon';
 
 const initialState = {
   isFetching: true

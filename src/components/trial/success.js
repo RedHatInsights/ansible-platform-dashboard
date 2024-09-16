@@ -4,8 +4,8 @@ import React, { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { Link as RouterLink } from 'react-router-dom';
 
-import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
-import DownloadIcon from '@patternfly/react-icons/dist/js/icons/download-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
+import DownloadIcon from '@patternfly/react-icons/dist/dynamic/icons/download-icon';
 
 import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
 import useChrome from '@redhat-cloud-services/frontend-components/useChrome';

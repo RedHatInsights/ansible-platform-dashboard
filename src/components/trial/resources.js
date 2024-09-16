@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { useIntl } from 'react-intl';
-import ExternalLinkIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
-import ArrowRightIcon from '@patternfly/react-icons/dist/js/icons/arrow-right-icon';
+import ExternalLinkIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
 
 import {
   TextContent,

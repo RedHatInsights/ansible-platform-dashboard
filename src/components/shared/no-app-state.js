@@ -1,7 +1,7 @@
 import React from 'react';
 import DashboardHeader from './dashboard-header';
 import { Button, Flex, FlexItem } from '@patternfly/react-core';
-import ArrowRightIcon from '@patternfly/react-icons/dist/js/icons/arrow-right-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
 import messages from '../../messages/messages';
 import { useIntl } from 'react-intl';
 

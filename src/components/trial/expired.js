@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { Link as RouterLink } from 'react-router-dom';
 
-import ExclamationIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
+import ExclamationIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
 import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
 
 import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
