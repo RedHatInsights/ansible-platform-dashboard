@@ -17,8 +17,7 @@ const messages = defineMessages({
   analyticsCardDescription: {
     id: 'analytics.description',
     defaultMessage:
-      'Gain insights into your deployments through visual dashboards and organization statistics, calculate your return on investment' +
-      ', and explore automation processes details.',
+      'Gain insights into your deployments through visual dashboards and organization statistics, calculate your return on investment, and explore automation processes details.',
   },
   analyticsJobTitle: {
     id: 'analytics.jobs.title',
@@ -80,8 +79,7 @@ const messages = defineMessages({
   hubCardCertifiedCollectionDescription: {
     id: 'hub.certified.description',
     defaultMessage:
-      'View Ansible Content Collections certified and supported by Red Hat. ' +
-      'Download collections or sync them to your local repositories.',
+      'View Ansible Content Collections certified and supported by Red Hat. Download collections or sync them to your local repositories.',
   },
   hubCardFeaturedCollectionTitle: {
     id: 'hub.featured.title',
@@ -128,9 +126,7 @@ const messages = defineMessages({
   noAppDescription: {
     id: 'no.app.description',
     defaultMessage:
-      'Red Hat Ansible Automation Platform simplifies the development and operation of automation' +
-      ' workloads across diverse hybrid environments using the Automation Controller, certified and supported content' +
-      ' collections, and the hosted services on cloud.redhat.com',
+      'Red Hat Ansible Automation Platform simplifies the development and operation of automation workloads across diverse hybrid environments using the Automation Controller, certified and supported content  collections, and the hosted services on console.redhat.com',
   },
   configureLink: {
     id: 'configure.button',
@@ -147,9 +143,7 @@ const messages = defineMessages({
   configDescription: {
     id: 'config.description',
     defaultMessage:
-      'Install and configure your Ansible Automation Controller clusters. Once your Ansible Automation ' +
-      'Controller infrastructure is in place, connect it to the hosted services available on cloud.redhat.com.' +
-      'Learn how connect to each service in the tiles below.',
+      'Install and configure your Ansible Automation Controller clusters. Once your Ansible Automation Controller infrastructure is in place, connect it to the hosted services available on console.redhat.com. Learn how connect to each service in the tiles below.',
   },
   configureAnalyticsTitle: {
     id: 'configure.analytics.title',
@@ -158,8 +152,7 @@ const messages = defineMessages({
   configureAnalyticsDescription: {
     id: 'configure.analytics.description',
     defaultMessage:
-      'Gain insights into your deployments through visual dashboards and organization statistics, ' +
-      'calculate your return on investment, and explore automation processes details',
+      'Gain insights into your deployments through visual dashboards and organization statistics, calculate your return on investment, and explore automation processes details',
   },
   viewMore: {
     id: 'labels.view.more',
