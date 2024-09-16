@@ -1,15 +1,14 @@
-import promiseMiddleware from 'redux-promise-middleware';
+import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
+import { notificationsReducer } from '@redhat-cloud-services/frontend-components-notifications/redux';
 import ReducerRegistry, {
   applyReducerHash,
 } from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
-import { notificationsReducer } from '@redhat-cloud-services/frontend-components-notifications/redux';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
-
+import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
-import hubReducer, { hubInitialState } from '../redux/reducers/hub-reducer';
 import analyticsReducer, {
   analyticsInitialState,
 } from '../redux/reducers/analytics-reducer';
+import hubReducer, { hubInitialState } from '../redux/reducers/hub-reducer';
 
 const getStore = (middlewares = []) => {
   const registry = new ReducerRegistry({}, [

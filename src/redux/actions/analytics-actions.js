@@ -1,5 +1,5 @@
-import * as ActionTypes from '../action-types';
 import * as AnalyticsHelper from '../../helpers/analytics/analytics-helper';
+import * as ActionTypes from '../action-types';
 
 const setAnalyticsAvailability = (dispatch, value = true) => {
   return dispatch({

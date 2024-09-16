@@ -1,8 +1,4 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { useIntl } from 'react-intl';
-import PropTypes from 'prop-types';
-
 import {
   Button,
   Stack,
@@ -10,11 +6,13 @@ import {
   TextContent,
   Title,
 } from '@patternfly/react-core';
-
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useIntl } from 'react-intl';
 import trialMessages from '../../messages/trial.messages';
-import Link from './link';
-import downloadTrial from './download-trial';
 import { RHEL_CHECKSUM } from './constants';
+import downloadTrial from './download-trial';
+import Link from './link';
 
 const Requirements = ({ afterTrial }) => {
   const intl = useIntl();

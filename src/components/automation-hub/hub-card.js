@@ -1,5 +1,3 @@
-import React, { Fragment, useContext, useEffect, useReducer } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import {
   Bullseye,
   Button,
@@ -14,6 +12,7 @@ import {
   Label,
   Level,
   LevelItem,
+  Popover,
   Spinner,
   Stack,
   StackItem,
@@ -21,10 +20,13 @@ import {
   TextContent,
   TextVariants,
   Title,
-  Popover,
 } from '@patternfly/react-core';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
+import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-question-circle-icon';
 import { Section } from '@redhat-cloud-services/frontend-components/Section';
+import React, { Fragment, useContext, useEffect, useReducer } from 'react';
 import { useIntl } from 'react-intl';
+import { useDispatch, useSelector } from 'react-redux';
 import messages from '../../messages/messages';
 import {
   fetchCollection,
@@ -33,12 +35,10 @@ import {
   fetchSyncCollections,
 } from '../../redux/actions/hub-actions';
 import UserContext from '../../user-context';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
-import { contentCounts } from './content-counts';
-import { Logo } from './logo';
 import { release } from '../../utilities/app-history';
 import ErrorCard from '../shared/error-card';
-import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-question-circle-icon';
+import { contentCounts } from './content-counts';
+import { Logo } from './logo';
 
 const initialState = {
   isFetching: true,

@@ -1,5 +1,5 @@
-import * as ActionTypes from '../action-types';
 import * as HubHelper from '../../helpers/automation-hub/hub-helper';
+import * as ActionTypes from '../action-types';
 
 const setHubAvailability = (dispatch, value = true) => {
   return dispatch({

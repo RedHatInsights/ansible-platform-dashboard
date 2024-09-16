@@ -1,9 +1,8 @@
-import './marketing-banner.scss';
-
 import { PageSection } from '@patternfly/react-core';
-import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
+import React from 'react';
+import './marketing-banner.scss';
 
 const MarketingBanner = ({
   className,

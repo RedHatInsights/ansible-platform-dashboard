@@ -1,6 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../../App.scss';
 import {
   Bullseye,
   Card,
@@ -10,7 +7,10 @@ import {
   StackItem,
   Title,
 } from '@patternfly/react-core';
+import PropTypes from 'prop-types';
+import React from 'react';
 import LinesEllipsis from 'react-lines-ellipsis';
+import '../../App.scss';
 
 const ConfigureCard = ({ title, description, renderButtons }) => {
   return (

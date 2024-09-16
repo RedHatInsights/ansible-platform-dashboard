@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../../App.scss';
 import {
   Card,
   EmptyState,
   EmptyStateBody,
-  EmptyStateIcon,
   EmptyStateHeader,
+  EmptyStateIcon,
 } from '@patternfly/react-core';
-import { global_danger_color_200 } from '@patternfly/react-tokens';
-import { useIntl } from 'react-intl';
-import messages from '../../messages/messages';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
+import { global_danger_color_200 } from '@patternfly/react-tokens';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useIntl } from 'react-intl';
+import '../../App.scss';
+import messages from '../../messages/messages';
 
 const Br = () => <br />;
 

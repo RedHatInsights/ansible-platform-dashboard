@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './utilities/store';
 import App from './App';
-import PropTypes from 'prop-types';
+import store from './utilities/store';
 
 const AppEntry = () => (
   <Provider store={store([])}>

@@ -1,41 +1,37 @@
 /* eslint-disable max-len */
-
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Card,
+  CardBody,
+  Divider,
+  Flex,
+  FlexItem,
+  PageSection,
+  Stack,
+  StackItem,
+  Text,
+  TextContent,
+  TextList,
+  TextListItem,
+  Title,
+} from '@patternfly/react-core';
+import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
+import DownloadIcon from '@patternfly/react-icons/dist/dynamic/icons/download-icon';
+import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
+import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
 import React, { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { Link as RouterLink } from 'react-router-dom';
-
-import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
-import DownloadIcon from '@patternfly/react-icons/dist/dynamic/icons/download-icon';
-
-import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
-import {
-  TextContent,
-  Text,
-  Breadcrumb,
-  BreadcrumbItem,
-  PageSection,
-  Card,
-  Divider,
-  CardBody,
-  Stack,
-  StackItem,
-  Button,
-  TextList,
-  TextListItem,
-  Flex,
-  FlexItem,
-  Title,
-} from '@patternfly/react-core';
-
 import { DASHBOARD_ROUTE } from '../../constants/routes';
 import successMessages from '../../messages/success.messages';
+import { ANSIBLE_CHECKSUM } from './constants';
+import downloadTrial from './download-trial';
+import Link from './link';
+import Logo from './logo';
 import Requirements from './requirements';
 import Resources from './resources';
-import Logo from './logo';
-import Link from './link';
-import downloadTrial from './download-trial';
-import { ANSIBLE_CHECKSUM } from './constants';
 
 const Success = () => {
   const intl = useIntl();

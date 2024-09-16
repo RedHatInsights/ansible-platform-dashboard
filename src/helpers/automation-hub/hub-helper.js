@@ -1,10 +1,10 @@
 /* eslint camelcase: 0 */
-import { getAxiosInstance } from '../shared/user-login';
 import {
-  AUTOMATION_HUB_BASE,
   AUTOMATION_HUB_API_BASE,
+  AUTOMATION_HUB_BASE,
   AUTOMATION_HUB_UI_API_BASE,
 } from '../../utilities/constants';
+import { getAxiosInstance } from '../shared/user-login';
 
 const axiosInstance = getAxiosInstance();
 

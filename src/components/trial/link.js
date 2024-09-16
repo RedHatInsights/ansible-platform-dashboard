@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 import { Text } from '@patternfly/react-core';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Link = ({ link, children }) => (
   <Text component="a" href={link} target="_blank" rel="noopener noreferrer">

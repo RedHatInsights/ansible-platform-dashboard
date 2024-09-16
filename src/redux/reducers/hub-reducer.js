@@ -1,3 +1,4 @@
+import { defaultSettings } from '../../helpers/shared/pagination';
 import {
   FETCH_COLLECTION,
   FETCH_COLLECTIONS,
@@ -8,7 +9,6 @@ import {
   SET_HUB_LOADING_STATE,
 } from '../action-types';
 
-import { defaultSettings } from '../../helpers/shared/pagination';
 // Initial State
 export const hubInitialState = {
   isLoading: false,

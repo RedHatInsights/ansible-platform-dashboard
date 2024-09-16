@@ -1,6 +1,6 @@
-import { Grid, GridItem, Flex, FlexItem, Title } from '@patternfly/react-core';
-import React from 'react';
+import { Flex, FlexItem, Grid, GridItem, Title } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { useIntl } from 'react-intl';
 import MarketingBanner from './marketing-banner';
 

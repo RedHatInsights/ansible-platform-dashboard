@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import {
   Chart,
   ChartAxis,
@@ -6,12 +5,12 @@ import {
   ChartStack,
   ChartTooltip,
 } from '@patternfly/react-charts';
-
+import c_content_small_FontSize from '@patternfly/react-tokens';
 import chart_color_green_400 from '@patternfly/react-tokens/dist/js/chart_color_green_400';
 import chart_color_red_300 from '@patternfly/react-tokens/dist/js/chart_color_red_300';
-import messages from '../../messages/messages';
+import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
-import c_content_small_FontSize from '@patternfly/react-tokens';
+import messages from '../../messages/messages';
 
 const JobsChart = (data) => {
   const [width, setWidth] = useState(window.innerWidth);

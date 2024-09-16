@@ -1,22 +1,19 @@
 /* eslint-disable max-len */
-
-import React from 'react';
-import { useIntl } from 'react-intl';
-import ExternalLinkIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
-import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
-
 import {
-  TextContent,
-  Text,
+  Button,
   Card,
   CardBody,
-  Button,
   CardFooter,
   Grid,
   GridItem,
+  Text,
+  TextContent,
   Title,
 } from '@patternfly/react-core';
-
+import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
+import ExternalLinkIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
+import React from 'react';
+import { useIntl } from 'react-intl';
 import successMessages from '../../messages/success.messages';
 
 const Resources = () => {

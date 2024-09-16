@@ -1,7 +1,7 @@
-import downloadTrial from '../../../components/trial/download-trial';
 import { ANSIBLE_CHECKSUM } from '../../../components/trial/constants';
-import * as axios from '../../../helpers/shared/user-login';
 import * as downloadFile from '../../../components/trial/download-file';
+import downloadTrial from '../../../components/trial/download-trial';
+import * as axios from '../../../helpers/shared/user-login';
 
 describe('downloadTrial', () => {
   it('gets TOKEN and sends a request', async () => {

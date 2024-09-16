@@ -1,39 +1,35 @@
 /* eslint-disable max-len */
-
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  Divider,
+  Flex,
+  FlexItem,
+  Grid,
+  GridItem,
+  PageSection,
+  Stack,
+  StackItem,
+  Text,
+  TextContent,
+  Title,
+} from '@patternfly/react-core';
+import ExclamationIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
+import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
+import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
 import React, { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { Link as RouterLink } from 'react-router-dom';
-
-import ExclamationIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
-
-import { PageHeader } from '@redhat-cloud-services/frontend-components/PageHeader';
-import {
-  TextContent,
-  Text,
-  Breadcrumb,
-  BreadcrumbItem,
-  PageSection,
-  Card,
-  Divider,
-  CardBody,
-  Stack,
-  StackItem,
-  Grid,
-  GridItem,
-  CardFooter,
-  Button,
-  CardTitle,
-  Title,
-  FlexItem,
-  Flex,
-} from '@patternfly/react-core';
-
 import { DASHBOARD_ROUTE } from '../../constants/routes';
-import Resources from './resources';
 import expiredMessages from '../../messages/expired.messages';
-import Logo from './logo';
 import Link from './link';
+import Logo from './logo';
+import Resources from './resources';
 
 const Expired = () => {
   const intl = useIntl();

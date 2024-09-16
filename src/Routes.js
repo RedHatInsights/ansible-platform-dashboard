@@ -1,13 +1,12 @@
 import React, { lazy } from 'react';
-
-import { Routes as RouterRoutes, Route } from 'react-router-dom';
+import { Route, Routes as RouterRoutes } from 'react-router-dom';
+import Error404 from './components/shared/error-404';
 import {
   DASHBOARD_ROUTE,
   TRIAL_EXPIRED_ROUTE,
   TRIAL_ROUTE,
   TRIAL_SUCCESS_ROUTE,
 } from './constants/routes';
-import Error404 from './components/shared/error-404';
 
 const Dashboard = lazy(() =>
   import(

@@ -1,9 +1,9 @@
-import React from 'react';
-import DashboardHeader from './dashboard-header';
 import { Button, Flex, FlexItem } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
-import messages from '../../messages/messages';
+import React from 'react';
 import { useIntl } from 'react-intl';
+import messages from '../../messages/messages';
+import DashboardHeader from './dashboard-header';
 
 const renderButtons = (intl) => (
   <Flex>

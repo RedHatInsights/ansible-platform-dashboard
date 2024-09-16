@@ -1,6 +1,7 @@
 /* eslint camelcase: 0 */
 import { stringify } from 'query-string';
 import { getAxiosInstance } from '../shared/user-login';
+
 /* v0 endpoints */
 const clustersEndpoint = `/api/tower-analytics/v0/clusters/`;
 const notificationsEndpoint = `/api/tower-analytics/v0/notifications/`;

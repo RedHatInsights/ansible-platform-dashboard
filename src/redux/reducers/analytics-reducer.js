@@ -1,14 +1,14 @@
+import { defaultSettings } from '../../helpers/shared/pagination';
 import {
   FETCH_CLUSTERS,
   FETCH_ERROR_NOTIFICATIONS,
-  FETCH_WARNING_NOTIFICATIONS,
   FETCH_JOBS,
-  SET_ANALYTICS_LOADING_STATE,
+  FETCH_WARNING_NOTIFICATIONS,
   SET_ANALYTICS_AVAILABILITY,
   SET_ANALYTICS_ERROR,
+  SET_ANALYTICS_LOADING_STATE,
 } from '../action-types';
 
-import { defaultSettings } from '../../helpers/shared/pagination';
 // Initial State
 export const analyticsInitialState = {
   isLoading: false,

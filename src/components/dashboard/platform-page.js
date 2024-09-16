@@ -1,13 +1,13 @@
-import React from 'react';
-import DashboardHeader from '../shared/dashboard-header';
 import { PageSection, Stack, StackItem } from '@patternfly/react-core';
+import React from 'react';
 import { useIntl } from 'react-intl';
-import messages from '../../messages/messages';
-import HubCard from '../automation-hub/hub-card';
-import AnalyticsCard from '../analytics/analytics-card';
 import { useSelector } from 'react-redux';
-import ConfigureAppPage from './configure-app-page';
+import messages from '../../messages/messages';
+import AnalyticsCard from '../analytics/analytics-card';
+import HubCard from '../automation-hub/hub-card';
+import DashboardHeader from '../shared/dashboard-header';
 import NoAppState from '../shared/no-app-state';
+import ConfigureAppPage from './configure-app-page';
 
 const PlatformPage = () => {
   const intl = useIntl();

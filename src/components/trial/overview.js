@@ -1,9 +1,4 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
-import { useIntl } from 'react-intl';
-import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
-
-import DashboardHeader from '../shared/dashboard-header';
 import {
   Accordion,
   AccordionContent,
@@ -23,12 +18,15 @@ import {
   TextListItem,
   Title,
 } from '@patternfly/react-core';
-
+import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
 import trialMessages from '../../messages/trial.messages';
-import Requirements from './requirements';
+import DashboardHeader from '../shared/dashboard-header';
+import { BETA_TRIAL_PAGE, TRIAL_PAGE } from './constants';
 import Link from './link';
-import { TRIAL_PAGE, BETA_TRIAL_PAGE } from './constants';
+import Requirements from './requirements';
 
 const Overview = () => {
   const [activeFaq, openFaq] = useState();

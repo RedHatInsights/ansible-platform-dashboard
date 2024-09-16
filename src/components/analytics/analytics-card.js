@@ -1,37 +1,37 @@
-import React, { Fragment, useEffect, useReducer } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
 import {
   Bullseye,
+  Button,
   Card,
   CardBody,
   CardTitle,
-  Divider,
   DescriptionList,
   DescriptionListDescription,
+  Divider,
   Flex,
   FlexItem,
   Label,
   Spinner,
   Text,
   Title,
-  Button,
 } from '@patternfly/react-core';
+import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
+import WarningTriangleIcon from '@patternfly/react-icons/dist/dynamic/icons/warning-triangle-icon';
 import { Section } from '@redhat-cloud-services/frontend-components/Section';
+import React, { Fragment, useEffect, useReducer } from 'react';
 import { useIntl } from 'react-intl';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import messages from '../../messages/messages';
 import {
   fetchClusters,
   fetchErrorNotifications,
-  fetchWarningNotifications,
   fetchJobsData,
+  fetchWarningNotifications,
 } from '../../redux/actions/analytics-actions';
-import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
-import WarningTriangleIcon from '@patternfly/react-icons/dist/dynamic/icons/warning-triangle-icon';
-import JobsChart from './jobs-chart';
 import { release } from '../../utilities/app-history';
-import ConfigureAnalyticsCard from './configure-analytics-card';
 import ErrorCard from '../shared/error-card';
+import ConfigureAnalyticsCard from './configure-analytics-card';
+import JobsChart from './jobs-chart';
 
 const initialState = {
   isFetching: true,

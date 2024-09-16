@@ -1,9 +1,9 @@
-import React from 'react';
 import { Button, Flex, FlexItem } from '@patternfly/react-core';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
+import React from 'react';
 import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
 import ConfigureCard from '../shared/configure-card';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 
 const renderAnalyticsConfigButton = (intl) => (
   <Flex>

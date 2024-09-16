@@ -1,15 +1,13 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import '@patternfly/pfe-icon';
 import NotificationsPortal from '@redhat-cloud-services/frontend-components-notifications/NotificationPortal';
-import { Routes } from './Routes';
+import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import React, { Suspense, useEffect, useState } from 'react';
 // react-int eng locale data
 import { IntlProvider } from 'react-intl';
-import UserContext from './user-context';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
-
 import './App.scss';
-import '@patternfly/pfe-icon';
-
+import { Routes } from './Routes';
 import AppPlaceholder from './components/shared/loader-placeholders';
+import UserContext from './user-context';
 
 const pathName = window.location.pathname.split('/');
 
