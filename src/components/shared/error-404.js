@@ -6,7 +6,7 @@ import {
 } from '@patternfly/react-core';
 import PathMissingIcon from '@patternfly/react-icons/dist/dynamic/icons/path-missing-icon';
 import PropTypes from 'prop-types';
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Error404 = (props) => {

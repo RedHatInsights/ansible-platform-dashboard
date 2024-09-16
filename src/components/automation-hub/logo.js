@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import * as React from 'react';
+import React from 'react';
 
 export const IconPlaceholder = ({ height = 40 }) => (
   <svg height={height} width={height}>
