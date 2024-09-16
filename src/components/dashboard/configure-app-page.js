@@ -16,10 +16,6 @@ import HubCard from '../automation-hub/hub-card';
 import ConfigureCard from '../shared/configure-card';
 import DashboardHeader from '../shared/dashboard-header';
 
-// TODO docs.redhat instad of access?
-const url = 'https://access.redhat.com/documentation/en-us';
-const extendedUrl =
-  'red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index';
 const renderButtons = (intl) => (
   <Flex>
     <FlexItem>
@@ -29,7 +25,7 @@ const renderButtons = (intl) => (
         variant="primary"
         target="_blank"
         rel="noopener noreferrer"
-        href={`${url}/${extendedUrl}`}
+        href={`https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index`}
       >
         {intl.formatMessage(messages.configureLink)}
       </Button>

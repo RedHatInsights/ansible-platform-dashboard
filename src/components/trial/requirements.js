@@ -43,7 +43,7 @@ const Requirements = ({ afterTrial }) => {
                 </Title>
                 {intl.formatMessage(installText, {
                   a1: (chunks) => (
-                    <Link link="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/performing_a_standard_rhel_9_installation/index">
+                    <Link link="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9#Installing%20RHEL">
                       {chunks}
                     </Link>
                   ),

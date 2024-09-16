@@ -158,7 +158,7 @@ const Success = () => {
                             </TextListItem>
                           ),
                           a: (chunks) => (
-                            <Link link="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index">
+                            <Link link="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index">
                               {chunks}
                             </Link>
                           ),

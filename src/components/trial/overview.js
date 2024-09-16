@@ -132,7 +132,7 @@ const Overview = () => {
             <Accordion isBordered displaySize="lg">
               {createAccordionItem(1, {
                 a: (chunks) => (
-                  <Link link="https://access.redhat.com/">{chunks}</Link>
+                  <Link link="https://access.redhat.com">{chunks}</Link>
                 ),
               })}
               {createAccordionItem(2)}
@@ -141,12 +141,12 @@ const Overview = () => {
                 ul: (chunks) => <TextList>{chunks}</TextList>,
                 li: (chunks) => <TextListItem>{chunks}</TextListItem>,
                 a: (chunks) => (
-                  <Link link="https://access.redhat.com/documentation/en-US/">
+                  <Link link="https://docs.redhat.com/en/products">
                     {chunks}
                   </Link>
                 ),
                 a1: (chunks) => (
-                  <Link link="https://access.redhat.com/search/#/">
+                  <Link link="https://access.redhat.com/search/">
                     {chunks}
                   </Link>
                 ),
@@ -160,7 +160,7 @@ const Overview = () => {
                   </Link>
                 ),
                 a1: (chunks) => (
-                  <Link link="http://www.redhat.com/en/about/contact/sales">
+                  <Link link="http://www.redhat.com/en/contact">
                     {chunks}
                   </Link>
                 ),
@@ -170,14 +170,14 @@ const Overview = () => {
                 ol: (chunks) => <TextList component="ol">{chunks}</TextList>,
                 li: (chunks) => <TextListItem>{chunks}</TextListItem>,
                 a: (chunks) => (
-                  <Link link="http://www.redhat.com/en/about/contact/sales">
+                  <Link link="http://www.redhat.com/en/contact">
                     {chunks}
                   </Link>
                 ),
               })}
               {createAccordionItem(8, {
                 a: (chunks) => (
-                  <Link link="http://www.redhat.com/en/about/contact/sales">
+                  <Link link="http://www.redhat.com/en/contact">
                     {chunks}
                   </Link>
                 ),
@@ -186,7 +186,7 @@ const Overview = () => {
                 ul: (chunks) => <TextList>{chunks}</TextList>,
                 li: (chunks) => <TextListItem>{chunks}</TextListItem>,
                 a: (chunks) => (
-                  <Link link="http://www.redhat.com/en/about/contact/sales">
+                  <Link link="http://www.redhat.com/en/contact">
                     {chunks}
                   </Link>
                 ),

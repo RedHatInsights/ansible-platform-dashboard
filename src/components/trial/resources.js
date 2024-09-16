@@ -40,7 +40,7 @@ const Resources = () => {
                 size="lg"
                 isInline
                 component="a"
-                href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index"
+                href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -61,7 +61,7 @@ const Resources = () => {
                 size="lg"
                 isInline
                 component="a"
-                href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4"
+                href="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,7 +103,7 @@ const Resources = () => {
                 size="lg"
                 isInline
                 component="a"
-                href="https://www.redhat.com/en/contact?contact=customer-service#tab.contact-method.1"
+                href="https://www.redhat.com/en/contact/customer-service?contact=customer-service#tab.contact-method.1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
