@@ -32,7 +32,7 @@ const PlatformPage = () => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <DashboardHeader
         title={intl.formatMessage(messages.overview)}
         description={''}
@@ -47,7 +47,7 @@ const PlatformPage = () => {
           </StackItem>
         </Stack>
       </PageSection>
-    </React.Fragment>
+    </>
   );
 };
 

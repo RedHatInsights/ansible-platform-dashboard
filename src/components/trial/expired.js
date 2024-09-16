@@ -40,7 +40,7 @@ const Expired = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <PageHeader>
         <Breadcrumb>
           <BreadcrumbItem
@@ -168,7 +168,7 @@ const Expired = () => {
           </StackItem>
         </Stack>
       </PageSection>
-    </React.Fragment>
+    </>
   );
 };
 

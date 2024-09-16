@@ -24,7 +24,7 @@ import {
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import OutlinedQuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-question-circle-icon';
 import { Section } from '@redhat-cloud-services/frontend-components/Section';
-import React, { Fragment, useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import messages from '../../messages/messages';
@@ -96,7 +96,7 @@ const HubCard = () => {
   }, [collections]);
 
   const renderHubInfo = () => (
-    <React.Fragment>
+    <>
       <TextContent>
         <Text>
           {intl.formatMessage(messages.hubCardDescription)} <br />
@@ -183,7 +183,7 @@ const HubCard = () => {
           </FlexItem>
         </Flex>
       </Flex>
-    </React.Fragment>
+    </>
   );
 
   const filterContents = (contents) => {
@@ -376,7 +376,7 @@ const HubCard = () => {
   };
 
   return (
-    <Fragment>
+    <>
       <Card className="ans-c-card-dashboard">
         <CardTitle>
           <Title headingLevel="h3">
@@ -385,7 +385,7 @@ const HubCard = () => {
         </CardTitle>
         <CardBody>{renderHubCards()}</CardBody>
       </Card>
-    </Fragment>
+    </>
   );
 };
 

@@ -4,11 +4,11 @@ import React from 'react';
 
 const AppPlaceholder = () => {
   return (
-    <React.Fragment>
+    <>
       <Skeleton size="md" />
       <br />
       <Skeleton size="md" />
-    </React.Fragment>
+    </>
   );
 };
 

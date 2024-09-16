@@ -19,7 +19,7 @@ const Resources = () => {
   const intl = useIntl();
 
   return (
-    <React.Fragment>
+    <>
       <TextContent>
         <Title headingLevel="h2" size="xl">
           {intl.formatMessage(successMessages.resources)}
@@ -138,7 +138,7 @@ const Resources = () => {
           {intl.formatMessage(successMessages.allTrials)}
         </Button>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

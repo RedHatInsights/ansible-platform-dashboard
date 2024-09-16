@@ -16,9 +16,10 @@ import HubCard from '../automation-hub/hub-card';
 import ConfigureCard from '../shared/configure-card';
 import DashboardHeader from '../shared/dashboard-header';
 
+// TODO docs.redhat instad of access?
 const url = 'https://access.redhat.com/documentation/en-us';
 const extendedUrl =
-  'red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/index';
+  'red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index';
 const renderButtons = (intl) => (
   <Flex>
     <FlexItem>
@@ -57,7 +58,7 @@ const ConfigureAppPage = () => {
   const intl = useIntl();
 
   return (
-    <React.Fragment>
+    <>
       <DashboardHeader
         title={intl.formatMessage(messages.noAppTitle)}
         description={intl.formatMessage(messages.configDescription)}
@@ -83,7 +84,7 @@ const ConfigureAppPage = () => {
           </StackItem>
         </Stack>
       </PageSection>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -24,7 +24,7 @@ const Requirements = ({ afterTrial }) => {
     : trialMessages.reqCardBreakContent;
 
   return (
-    <React.Fragment>
+    <>
       <TextContent>
         <Title headingLevel="h2" size="lg" className="pf-u-mb-lg">
           {intl.formatMessage(trialMessages.reqCardHeader)}
@@ -83,7 +83,7 @@ const Requirements = ({ afterTrial }) => {
           </div>
         </StackItem>
       </Stack>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ import {
 import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
 import WarningTriangleIcon from '@patternfly/react-icons/dist/dynamic/icons/warning-triangle-icon';
 import { Section } from '@redhat-cloud-services/frontend-components/Section';
-import React, { Fragment, useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -94,7 +94,7 @@ const AnalyticsCard = () => {
 
   const renderAnalyticsNotifications = () => {
     return (
-      <React.Fragment>
+      <>
         <DescriptionList
           className="pf-v5-c-description-list.pf-v5-m-vertical"
           columnModifier={{
@@ -129,13 +129,13 @@ const AnalyticsCard = () => {
             </Label>
           </DescriptionListDescription>
         </DescriptionList>
-      </React.Fragment>
+      </>
     );
   };
 
   const renderAnalyticsInfo = () => {
     return (
-      <Fragment>
+      <>
         <Flex className=" ans-l-flex ans-l-flex-automation-analytics-info">
           <FlexItem>
             <Text>{intl.formatMessage(messages.analyticsCardDescription)}</Text>
@@ -161,12 +161,12 @@ const AnalyticsCard = () => {
             </DescriptionList>
           </FlexItem>
         </Flex>
-      </Fragment>
+      </>
     );
   };
 
   const renderAnalyticsOther = () => (
-    <Fragment>
+    <>
       <Title headingLevel="h4">
         {intl.formatMessage(messages.analyticsJobTitle)}
       </Title>
@@ -187,7 +187,7 @@ const AnalyticsCard = () => {
           </Bullseye>
         </FlexItem>
       </Flex>
-    </Fragment>
+    </>
   );
 
   const renderAnalyticsCards = () => {
@@ -222,7 +222,7 @@ const AnalyticsCard = () => {
   return !isAnalyticsAvailable ? (
     <ConfigureAnalyticsCard />
   ) : (
-    <Fragment>
+    <>
       <Card className="ans-c-card-dashboard">
         <CardTitle>
           <Title headingLevel="h3">
@@ -231,7 +231,7 @@ const AnalyticsCard = () => {
         </CardTitle>
         <CardBody className="pf-v5-u-pb-sm">{renderAnalyticsCards()}</CardBody>
       </Card>
-    </Fragment>
+    </>
   );
 };
 

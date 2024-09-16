@@ -53,7 +53,7 @@ const Overview = () => {
   );
 
   return (
-    <React.Fragment>
+    <>
       <DashboardHeader
         title={intl.formatMessage(messages.overview)}
         description={''}
@@ -214,7 +214,7 @@ const Overview = () => {
           </StackItem>
         </Stack>
       </PageSection>
-    </React.Fragment>
+    </>
   );
 };
 

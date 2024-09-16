@@ -47,7 +47,7 @@ const Success = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <>
       <PageHeader>
         <Breadcrumb>
           <BreadcrumbItem
@@ -230,7 +230,7 @@ const Success = () => {
           </StackItem>
         </Stack>
       </PageSection>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -39,12 +39,12 @@ const App = () => {
     >
       <Suspense fallback={<AppPlaceholder />}>
         <IntlProvider locale="en">
-          <React.Fragment>
+          <>
             <NotificationsPortal />
             <section className="ans-c-dashboard pf-v5-c-page__main-section pf-v5-l-page__main-section pf-v5-u-p-0 pf-v5-u-ml-0">
               <Routes />
             </section>
-          </React.Fragment>
+          </>
         </IntlProvider>
       </Suspense>
     </UserContext.Provider>
