@@ -1,13 +1,13 @@
 import { INITIALIZE_I18N } from '../action-types';
 
 export const i18nInitialState = {
-  formatMessage: ({ defaultMessage = '' }) => defaultMessage
+  formatMessage: ({ defaultMessage = '' }) => defaultMessage,
 };
 const initialize = (state, { payload }) => ({
   ...state,
-  ...payload
+  ...payload,
 });
 
 export default {
-  [INITIALIZE_I18N]: initialize
+  [INITIALIZE_I18N]: initialize,
 };

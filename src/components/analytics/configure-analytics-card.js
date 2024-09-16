@@ -9,12 +9,13 @@ const renderAnalyticsConfigButton = (intl) => (
   <Flex>
     <FlexItem>
       <Button
-        component='a'
-        variant='link'
+        component="a"
+        variant="link"
         target="_blank"
         rel="noopener noreferrer"
-        href={ `https://docs.ansible.com/ansible-tower/latest/html/administration/usability_data_collection.html` }>
-        { intl.formatMessage(messages.configureAnalyticsLink) }&nbsp;
+        href={`https://docs.ansible.com/ansible-tower/latest/html/administration/usability_data_collection.html`}
+      >
+        {intl.formatMessage(messages.configureAnalyticsLink)}&nbsp;
         <ExternalLinkAltIcon />
       </Button>
     </FlexItem>
@@ -23,10 +24,13 @@ const renderAnalyticsConfigButton = (intl) => (
 
 const ConfigureAnalyticsCard = () => {
   const intl = useIntl();
-  return (<ConfigureCard
-    title={ intl.formatMessage(messages.configureAnalyticsTitle) }
-    description={ intl.formatMessage(messages.configureAnalyticsDescription) }
-    renderButtons={ () => renderAnalyticsConfigButton(intl) }/>);
+  return (
+    <ConfigureCard
+      title={intl.formatMessage(messages.configureAnalyticsTitle)}
+      description={intl.formatMessage(messages.configureAnalyticsDescription)}
+      renderButtons={() => renderAnalyticsConfigButton(intl)}
+    />
+  );
 };
 
 export default ConfigureAnalyticsCard;

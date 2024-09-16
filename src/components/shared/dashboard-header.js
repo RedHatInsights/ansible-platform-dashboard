@@ -1,4 +1,4 @@
-import { Grid, GridItem, Flex, FlexItem, Title  } from '@patternfly/react-core';
+import { Grid, GridItem, Flex, FlexItem, Title } from '@patternfly/react-core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
@@ -13,28 +13,30 @@ const DashboardHeader = ({ title, description, renderButtons }) => {
       graphicRight
       light1000
       fullBleed
-
-      style={ {
+      style={{
         '--ins-c-marketing-banner--graphic--width-on-md': '200px',
-        '--ins-c-marketing-banner--graphic--width-on-xl': '400px'
-      } }>
+        '--ins-c-marketing-banner--graphic--width-on-xl': '400px',
+      }}
+    >
       <Grid>
         <GridItem>
-          <Flex direction={ { default: 'column' } }>
+          <Flex direction={{ default: 'column' }}>
             <FlexItem>
-              <Title headingLevel='h1' size='2xl'>
-                { title }
+              <Title headingLevel="h1" size="2xl">
+                {title}
               </Title>
             </FlexItem>
-            { (description && description !== '') && <FlexItem spacer={ { default: 'spacer2xl' } }>
-              <div className='ins-c-width-limiter' style={ { '--ins-c-width-limiter--MaxWidth': '600px' } }>
-                <p className='ins-c-text--black-400'>{ description }</p>
-              </div>
-            </FlexItem> }
-            { renderButtons && <FlexItem>
-              { renderButtons(intl) }
-            </FlexItem>
-            }
+            {description && description !== '' && (
+              <FlexItem spacer={{ default: 'spacer2xl' }}>
+                <div
+                  className="ins-c-width-limiter"
+                  style={{ '--ins-c-width-limiter--MaxWidth': '600px' }}
+                >
+                  <p className="ins-c-text--black-400">{description}</p>
+                </div>
+              </FlexItem>
+            )}
+            {renderButtons && <FlexItem>{renderButtons(intl)}</FlexItem>}
           </Flex>
         </GridItem>
       </Grid>
@@ -45,7 +47,7 @@ const DashboardHeader = ({ title, description, renderButtons }) => {
 DashboardHeader.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  renderButtons: PropTypes.func
+  renderButtons: PropTypes.func,
 };
 
 export default DashboardHeader;

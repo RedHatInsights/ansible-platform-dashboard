@@ -6,7 +6,7 @@ const unAuthorizedMiddleware = () => (dispatch) => (action) => {
   if (action.type.match(/_REJECTED$/) && action?.payload?.redirect) {
     setTimeout(() => {
       history.push(action.payload.redirect.pathname, {
-        from: history.location
+        from: history.location,
       });
     });
     return;

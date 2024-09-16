@@ -5,13 +5,13 @@ const useFormatMessage = () => {
   const { formatMessage } = useIntl();
   return (message, values = {}) => {
     const internalValues = Object.entries(values).reduce(
-      (acc, [ key, value ]) => {
+      (acc, [key, value]) => {
         return {
           ...acc,
           [key]:
             typeof value === 'function'
-              ? (chunks) => <Fragment key={ key }>{ value(chunks) }</Fragment>
-              : value
+              ? (chunks) => <Fragment key={key}>{value(chunks)}</Fragment>
+              : value,
         };
       },
       {}

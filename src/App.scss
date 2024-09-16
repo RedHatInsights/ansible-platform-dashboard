@@ -4,7 +4,9 @@
 .ans-c-dashboard {
   .pf-v5-c-page__main-section {
     &.pf-m-light-1000 {
-      --pf-v5-c-page__main-section--BackgroundColor: var(--pf-v5-global--BackgroundColor--100);
+      --pf-v5-c-page__main-section--BackgroundColor: var(
+        --pf-v5-global--BackgroundColor--100
+      );
     }
     .pf-v5-l-stack {
       max-width: var(--pf-v5-c-page--section--m-limit-width--MaxWidth);
@@ -12,7 +14,7 @@
     .ans-c-card-dashboard {
       .ans-c-empty-state-error {
         svg {
-          height: var(--pf-v5-global--icon--FontSize--lg)
+          height: var(--pf-v5-global--icon--FontSize--lg);
         }
         &__body {
           font-size: var(--pf-v5-global--FontSize--sm);
@@ -34,7 +36,9 @@
           grid-template-columns: 1fr 1px 1fr 1px 1fr;
           .pf-v5-c-description-list {
             --pf-v5-c-description-list--RowGap: var(--pf-v5-global--spacer--md);
-            --pf-v5-c-description-list__group--ColumnGap: var(--pf-v5-global--spacer--0);
+            --pf-v5-c-description-list__group--ColumnGap: var(
+              --pf-v5-global--spacer--0
+            );
             --pf-v5-c-description-list__group--GridTemplateColumns: 60px auto;
             display: flex;
             flex-direction: column;
@@ -49,7 +53,8 @@
           grid-template-columns: 2fr 1px 1fr;
           .pf-v5-c-description-list {
             --pf-v5-c-description-list__group--GridTemplateRow: auto auto;
-            padding: 0 var(--pf-v5-global--spacer--2xl) 0 var(--pf-v5-global--spacer--2xl);
+            padding: 0 var(--pf-v5-global--spacer--2xl) 0
+              var(--pf-v5-global--spacer--2xl);
             &__term {
               font-size: var(--pf-v5-global--FontSize--2xl);
               padding-left: var(--pf-v5-global--spacer--xl);
@@ -61,7 +66,8 @@
           grid-template-columns: 3fr 1fr;
           .pf-v5-c-description-list {
             --pf-v5-c-description-list__group--GridTemplateRow: auto;
-            padding: 0 var(--pf-v5-global--spacer--2xl) 0 var(--pf-v5-global--spacer--2xl);
+            padding: 0 var(--pf-v5-global--spacer--2xl) 0
+              var(--pf-v5-global--spacer--2xl);
             &__term {
               font-size: var(--pf-v5-global--FontSize--2xl);
               padding-left: var(--pf-v5-global--spacer--2xl);
@@ -71,40 +77,43 @@
         }
       }
     }
-  
 
-  @media only screen and (max-width: 760px) {
-    .ans-l-flex-automation-hub-card,
-    .ans-l-flex-automation-analytics-card {
-      display: grid;
-      grid-template-columns: 1fr !important;
-      .pf-v5-c-title {
-        padding-top: var(--pf-v5-global--spacer--md);
-      }
-      .pf-v5-l-stack {
-        min-height: auto;
-      }
-      .pf-v5-c-content {
-        display: inline;
-      }
-      .pf-v5-c-divider {
-        flex-direction: row;
-        padding-top: var(--pf-v5-global--spacer--md);
+    @media only screen and (max-width: 760px) {
+      .ans-l-flex-automation-hub-card,
+      .ans-l-flex-automation-analytics-card {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        .pf-v5-c-title {
+          padding-top: var(--pf-v5-global--spacer--md);
+        }
+        .pf-v5-l-stack {
+          min-height: auto;
+        }
+        .pf-v5-c-content {
+          display: inline;
+        }
+        .pf-v5-c-divider {
+          flex-direction: row;
+          padding-top: var(--pf-v5-global--spacer--md);
+        }
       }
     }
-  }
-  .ins-c-primary-toolbar .ins-c-primary-toolbar__group-filter {
-     margin-right: 7px;
-   }
-  .ans-c-card-config {
-    height: 215px;
-    overflow: hidden;
-  }
-  .pf-v5-c-card__body .pf-v5-c-card {
-    --pf-v5-c-card--child--PaddingRight: calc(var(--pf-v5-c-card--child--PaddingRight) * -1);
-    --pf-v5-c-card--child--PaddingLeft: calc(var(--pf-v5-c-card--child--PaddingLeft) * -1);
-    --pf-v5-c-card--BoxShadow: none;
-  }
+    .ins-c-primary-toolbar .ins-c-primary-toolbar__group-filter {
+      margin-right: 7px;
+    }
+    .ans-c-card-config {
+      height: 215px;
+      overflow: hidden;
+    }
+    .pf-v5-c-card__body .pf-v5-c-card {
+      --pf-v5-c-card--child--PaddingRight: calc(
+        var(--pf-v5-c-card--child--PaddingRight) * -1
+      );
+      --pf-v5-c-card--child--PaddingLeft: calc(
+        var(--pf-v5-c-card--child--PaddingLeft) * -1
+      );
+      --pf-v5-c-card--BoxShadow: none;
+    }
   }
 }
 

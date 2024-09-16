@@ -1,7 +1,7 @@
 export const contentCounts = (content) => {
   const summary = {
     total_count: content ? content.length : 0,
-    contents: { module: 0, role: 0, plugin: 0 }
+    contents: { module: 0, role: 0, plugin: 0 },
   };
 
   if (content === undefined) {

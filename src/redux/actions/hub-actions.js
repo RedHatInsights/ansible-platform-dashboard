@@ -4,14 +4,14 @@ import * as HubHelper from '../../helpers/automation-hub/hub-helper';
 const setHubAvailability = (dispatch, value = true) => {
   return dispatch({
     type: ActionTypes.SET_HUB_AVAILABILITY,
-    payload: value
+    payload: value,
   });
 };
 
 const setHubError = (dispatch, value = true) => {
   return dispatch({
     type: ActionTypes.SET_HUB_ERROR,
-    payload: value
+    payload: value,
   });
 };
 
@@ -19,14 +19,13 @@ export const fetchCollections = () => (dispatch) => {
   const load = HubHelper.getCollections().catch((err) => {
     if (err.status === 404) {
       setHubAvailability(dispatch, false);
-    }
-    else {
+    } else {
       setHubError(dispatch, true);
     }
   });
   return dispatch({
     type: ActionTypes.FETCH_COLLECTIONS,
-    payload: load
+    payload: load,
   });
 };
 
@@ -36,11 +35,10 @@ export const fetchCollection = (offset) => (dispatch) => {
     payload: HubHelper.getCollection(offset).catch((err) => {
       if (err.status === 404) {
         setHubAvailability(dispatch, false);
-      }
-      else {
+      } else {
         setHubError(dispatch, true);
       }
-    })
+    }),
   });
 };
 
@@ -50,11 +48,10 @@ export const fetchPartners = () => (dispatch) => {
     payload: HubHelper.getPartners().catch((err) => {
       if (err.status === 404) {
         setHubAvailability(dispatch, false);
-      }
-      else {
+      } else {
         setHubError(dispatch, true);
       }
-    })
+    }),
   });
 };
 
@@ -64,11 +61,9 @@ export const fetchSyncCollections = (account) => (dispatch) => {
     payload: HubHelper.getSyncCollections(account).catch((err) => {
       if (err.status === 404) {
         setHubAvailability(dispatch, false);
-      }
-      else {
+      } else {
         setHubError(dispatch, true);
       }
-    })
+    }),
   });
 };
-

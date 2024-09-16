@@ -26,7 +26,7 @@ import {
   CardTitle,
   Title,
   FlexItem,
-  Flex
+  Flex,
 } from '@patternfly/react-core';
 
 import { DASHBOARD_ROUTE } from '../../constants/routes';
@@ -48,26 +48,37 @@ const Expired = () => {
     <React.Fragment>
       <PageHeader>
         <Breadcrumb>
-          <BreadcrumbItem component={ ({ href, ...props }) => <RouterLink to={ href } { ...props } /> } to={ DASHBOARD_ROUTE }>
-            { intl.formatMessage(expiredMessages.overviewLink) }
+          <BreadcrumbItem
+            component={({ href, ...props }) => (
+              <RouterLink to={href} {...props} />
+            )}
+            to={DASHBOARD_ROUTE}
+          >
+            {intl.formatMessage(expiredMessages.overviewLink)}
           </BreadcrumbItem>
           <BreadcrumbItem isActive>
-            { intl.formatMessage(expiredMessages.trialExpired) }
+            {intl.formatMessage(expiredMessages.trialExpired)}
           </BreadcrumbItem>
         </Breadcrumb>
         <TextContent>
-          <Flex spaceItems={ { default: 'spaceItemsSm' } } alignItems={ { default: 'alignItemsCenter' } }>
+          <Flex
+            spaceItems={{ default: 'spaceItemsSm' }}
+            alignItems={{ default: 'alignItemsCenter' }}
+          >
             <FlexItem>
-              <ExclamationIcon size='md' color='var(--pf-global--danger-color--100)'/>
+              <ExclamationIcon
+                size="md"
+                color="var(--pf-global--danger-color--100)"
+              />
             </FlexItem>
             <FlexItem>
               <Title headingLevel="h2" size="lg">
-                { intl.formatMessage(expiredMessages.title) }
+                {intl.formatMessage(expiredMessages.title)}
               </Title>
             </FlexItem>
           </Flex>
-          <Text className='pf-u-mt-md'>
-            { intl.formatMessage(expiredMessages.description) }
+          <Text className="pf-u-mt-md">
+            {intl.formatMessage(expiredMessages.description)}
           </Text>
         </TextContent>
       </PageHeader>
@@ -75,71 +86,87 @@ const Expired = () => {
         <Stack hasGutter>
           <StackItem>
             <Card>
-              <CardBody className='pf-u-pb-0'>
+              <CardBody className="pf-u-pb-0">
                 <Title headingLevel="h2" size="xl">
-                  { intl.formatMessage(expiredMessages.wannaTry) }
+                  {intl.formatMessage(expiredMessages.wannaTry)}
                 </Title>
-                <div className='pf-u-display-flex'>
-                  <div style={ { flexGrow: 1, alignSelf: 'center' } }>
+                <div className="pf-u-display-flex">
+                  <div style={{ flexGrow: 1, alignSelf: 'center' }}>
                     <TextContent>
                       <Text>
-                        { intl.formatMessage(expiredMessages.wannaTryText, { date: '' }) }
+                        {intl.formatMessage(expiredMessages.wannaTryText, {
+                          date: '',
+                        })}
                       </Text>
                     </TextContent>
                   </div>
                   <Logo />
                 </div>
-                <Divider className='pf-u-my-lg'/>
-                <Title headingLevel="h2" size="xl" className='pf-u-mb-md'>
-                  { intl.formatMessage(expiredMessages.readyBuy) }
+                <Divider className="pf-u-my-lg" />
+                <Title headingLevel="h2" size="xl" className="pf-u-mb-md">
+                  {intl.formatMessage(expiredMessages.readyBuy)}
                 </Title>
-                <div className='pf-u-display-flex pf-u-mb-md'>
-                  <div className='pf-u-mr-md'>
+                <div className="pf-u-display-flex pf-u-mb-md">
+                  <div className="pf-u-mr-md">
                     <pfe-icon icon="rh-icon-support" size="lg" />
                   </div>
-                  <div style={ { flexGrow: 1, alignSelf: 'center' } }>
+                  <div style={{ flexGrow: 1, alignSelf: 'center' }}>
                     <TextContent>
                       <Text>
-                        { intl.formatMessage(expiredMessages.readyBuyText, {
-                          a: (chunks) => <Link link="https://www.redhat.com/en/about/value-of-subscription">{ chunks }</Link>
-                        }) }
+                        {intl.formatMessage(expiredMessages.readyBuyText, {
+                          a: (chunks) => (
+                            <Link link="https://www.redhat.com/en/about/value-of-subscription">
+                              {chunks}
+                            </Link>
+                          ),
+                        })}
                       </Text>
                     </TextContent>
                   </div>
                 </div>
                 <Grid hasGutter>
-                  <GridItem md={ 6 }>
-                    <Card isFlat className='pf-u-px-md pf-u-h-100'>
+                  <GridItem md={6}>
+                    <Card isFlat className="pf-u-px-md pf-u-h-100">
                       <CardTitle>
-                        { intl.formatMessage(expiredMessages.sales) }
+                        {intl.formatMessage(expiredMessages.sales)}
                       </CardTitle>
                       <CardBody>
-                        { intl.formatMessage(expiredMessages.salesText) }
+                        {intl.formatMessage(expiredMessages.salesText)}
                       </CardBody>
                       <CardFooter>
-                        <Button component="a" href="https://www.redhat.com/en/contact" target="_blank" rel="noopener noreferrer">
-                          { intl.formatMessage(expiredMessages.salesButton) }
+                        <Button
+                          component="a"
+                          href="https://www.redhat.com/en/contact"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {intl.formatMessage(expiredMessages.salesButton)}
                         </Button>
                       </CardFooter>
                     </Card>
                   </GridItem>
-                  <GridItem md={ 6 }>
-                    <Card isFlat className='pf-u-px-md pf-u-h-100'>
+                  <GridItem md={6}>
+                    <Card isFlat className="pf-u-px-md pf-u-h-100">
                       <CardTitle>
-                        { intl.formatMessage(expiredMessages.partners) }
+                        {intl.formatMessage(expiredMessages.partners)}
                       </CardTitle>
                       <CardBody>
-                        { intl.formatMessage(expiredMessages.partnersText) }
+                        {intl.formatMessage(expiredMessages.partnersText)}
                       </CardBody>
                       <CardFooter>
-                        <Button component="a" href="https://redhat.secure.force.com/finder/" target="_blank" rel="noopener noreferrer">
-                          { intl.formatMessage(expiredMessages.partnersButton) }
+                        <Button
+                          component="a"
+                          href="https://redhat.secure.force.com/finder/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {intl.formatMessage(expiredMessages.partnersButton)}
                         </Button>
                       </CardFooter>
                     </Card>
                   </GridItem>
                 </Grid>
-                <Divider className='pf-u-my-lg'/>
+                <Divider className="pf-u-my-lg" />
                 <Resources />
               </CardBody>
             </Card>

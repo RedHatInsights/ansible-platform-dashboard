@@ -18,15 +18,17 @@ pathName.shift();
 const App = () => {
   const APPLICATION_NAME = 'automation-dashboard';
 
-  const [ userPermissions, setUserPermissions ] = useState();
-  const [ userIdentity, setUserIdentity ] = useState();
+  const [userPermissions, setUserPermissions] = useState();
+  const [userIdentity, setUserIdentity] = useState();
 
   const { updateDocumentTitle, auth, getUserPermissions } = useChrome();
 
   useEffect(() => {
     updateDocumentTitle(APPLICATION_NAME);
     auth.getUser().then((data) => setUserIdentity(data));
-    getUserPermissions(APPLICATION_NAME).then((data) => setUserPermissions(data));
+    getUserPermissions(APPLICATION_NAME).then((data) =>
+      setUserPermissions(data)
+    );
   }, []);
 
   if (!userIdentity) {
@@ -35,9 +37,9 @@ const App = () => {
 
   return (
     <UserContext.Provider
-      value={ { permissions: userPermissions, userIdentity  } }
+      value={{ permissions: userPermissions, userIdentity }}
     >
-      <Suspense fallback={ <AppPlaceholder /> }>
+      <Suspense fallback={<AppPlaceholder />}>
         <IntlProvider locale="en">
           <React.Fragment>
             <NotificationsPortal />

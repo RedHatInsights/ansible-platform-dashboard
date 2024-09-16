@@ -5,8 +5,15 @@ import React from 'react';
 import classNames from 'classnames';
 import propTypes from 'prop-types';
 
-const MarketingBanner = ({ className, hasGraphic, graphicRight, light1000, fullBleed, style, children }) => {
-
+const MarketingBanner = ({
+  className,
+  hasGraphic,
+  graphicRight,
+  light1000,
+  fullBleed,
+  style,
+  children,
+}) => {
   const MarketingBannerSectionClasses = classNames(
     className,
     'ans-c-marketing-banner',
@@ -16,12 +23,15 @@ const MarketingBanner = ({ className, hasGraphic, graphicRight, light1000, fullB
     { [`ans-m-full-bleed`]: fullBleed }
   );
 
-  return <PageSection
-    className={ MarketingBannerSectionClasses }
-    style={ style }
-    isWidthLimited>
-    { children }
-  </PageSection>;
+  return (
+    <PageSection
+      className={MarketingBannerSectionClasses}
+      style={style}
+      isWidthLimited
+    >
+      {children}
+    </PageSection>
+  );
 };
 
 export default MarketingBanner;
@@ -34,5 +44,5 @@ MarketingBanner.propTypes = {
   hasGraphic: propTypes.bool,
   light1000: propTypes.bool,
   fullBleed: propTypes.bool,
-  isWidthLimited: propTypes.bool
+  isWidthLimited: propTypes.bool,
 };

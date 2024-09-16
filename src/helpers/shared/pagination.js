@@ -2,7 +2,7 @@ export const defaultSettings = {
   limit: 1,
   offset: 0,
   count: 0,
-  filter: ''
+  filter: '',
 };
 
 export const getCurrentPage = (limit = 1, offset = 0) =>

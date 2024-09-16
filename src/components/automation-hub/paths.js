@@ -1,8 +1,6 @@
-
 const getQueryString = (params) => {
   const paramString = [];
   for (const key of Object.keys(params)) {
-
     if (Array.isArray(params[key])) {
       for (const val of params[key]) {
         paramString.push(key + '=' + encodeURIComponent(val));
@@ -30,11 +28,13 @@ export function formatPath(path, data, params = {}) {
 }
 
 export const Paths = {
-  executionEnvironmentDetailActivities: '/containers/:container+/_content/activity',
+  executionEnvironmentDetailActivities:
+    '/containers/:container+/_content/activity',
   executionEnvironmentDetailImages: '/containers/:container+/_content/images',
   executionEnvironmentDetail: '/containers/:container+',
   executionEnvironments: '/containers',
-  executionEnvironmentManifest: '/containers/:container+/_content/images/:digest',
+  executionEnvironmentManifest:
+    '/containers/:container+/_content/images/:digest',
   groupList: '/group-list',
   groupDetail: '/group/:group',
   myCollections: '/my-namespaces/:namespace',
@@ -54,7 +54,8 @@ export const Paths = {
   collectionImportLog: '/:namespace/:collection/import-log',
   collectionDocsPageByRepo: '/repo/:repo/:namespace/:collection/docs/:page',
   collectionDocsIndexByRepo: '/repo/:repo/:namespace/:collection/docs',
-  collectionContentDocsByRepo: '/repo/:repo/:namespace/:collection/content/:type/:name',
+  collectionContentDocsByRepo:
+    '/repo/:repo/:namespace/:collection/content/:type/:name',
   collectionContentListByRepo: '/repo/:repo/:namespace/:collection/content',
   collectionImportLogByRepo: '/repo/:repo/:namespace/:collection/import-log',
   namespaceByRepo: '/repo/:repo/:namespace',
@@ -70,5 +71,5 @@ export const Paths = {
   editUser: '/users/:userID/edit',
   userDetail: '/users/:userID',
   userProfileSettings: '/settings/user-profile',
-  repositories: '/repositories'
+  repositories: '/repositories',
 };

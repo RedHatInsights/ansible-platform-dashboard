@@ -12,8 +12,8 @@ const emptyDataMiddleware = () => (dispatch) => (action) => {
       'filters'
     )
       ? Object.values(nextAction.meta?.filters || {}).every(
-        (value) => typeof value === 'undefined' || value.length === 0
-      )
+          (value) => typeof value === 'undefined' || value.length === 0
+        )
       : nextAction.meta?.filter?.length === 0;
 
     nextAction.payload.meta.noData =

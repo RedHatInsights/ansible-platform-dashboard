@@ -10,21 +10,23 @@ const renderButtons = (intl) => (
     <FlexItem>
       <Button
         size="lg"
-        component='a'
-        variant='primary'
-        href={ `https://www.redhat.com/en/technologies/management/ansible/try-it` }>
-        { intl.formatMessage(messages.tryItButton) }
+        component="a"
+        variant="primary"
+        href={`https://www.redhat.com/en/technologies/management/ansible/try-it`}
+      >
+        {intl.formatMessage(messages.tryItButton)}
       </Button>
     </FlexItem>
     <FlexItem>
       <Button
-        component='a'
+        component="a"
         size="lg"
-        variant='link'
-        target='_blank'
-        rel='noreferrer'
-        href='https://www.redhat.com/en/technologies/management/ansible'>
-        { intl.formatMessage(messages.learnMoreButton) } &nbsp;
+        variant="link"
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.redhat.com/en/technologies/management/ansible"
+      >
+        {intl.formatMessage(messages.learnMoreButton)} &nbsp;
         <ArrowRightIcon />
       </Button>
     </FlexItem>
@@ -34,9 +36,13 @@ const renderButtons = (intl) => (
 const NoAppState = () => {
   const intl = useIntl();
 
-  return <DashboardHeader title={ intl.formatMessage(messages.noAppTitle) }
-    description={ intl.formatMessage(messages.noAppDescription) }
-    renderButtons={ renderButtons } />;
+  return (
+    <DashboardHeader
+      title={intl.formatMessage(messages.noAppTitle)}
+      description={intl.formatMessage(messages.noAppDescription)}
+      renderButtons={renderButtons}
+    />
+  );
 };
 
 export default NoAppState;

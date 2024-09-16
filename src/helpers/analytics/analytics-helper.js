@@ -10,28 +10,30 @@ const jobExplorerEndpoint = '/api/tower-analytics/v1/job_explorer/';
 
 const axiosInstance = getAxiosInstance();
 function authenticatedFetch(endpoint, options) {
-  return window.insights.chrome.auth.getUser().then(() => axiosInstance.get(endpoint, options));
+  return window.insights.chrome.auth
+    .getUser()
+    .then(() => axiosInstance.get(endpoint, options));
 }
 
 export const getJobsData = () => {
   const params = {
-    status: [ 'successful', 'failed' ],
+    status: ['successful', 'failed'],
     quick_date_range: 'last_30_days',
-    job_type: [ 'workflowjob', 'job' ],
+    job_type: ['workflowjob', 'job'],
     group_by_time: true,
     org_id: [],
     cluster_id: [],
     template_id: [],
     only_root_workflows_and_standalone_jobs: false,
     limit: 1,
-    offset: 0
+    offset: 0,
   };
   const qs = stringify(params);
   const url = new URL(jobExplorerEndpoint, window.location.origin);
   url.search = qs;
   return authenticatedFetch(url, {
     method: 'POST',
-    body: JSON.stringify(params)
+    body: JSON.stringify(params),
   });
 };
 

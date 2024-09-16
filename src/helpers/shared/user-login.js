@@ -2,7 +2,7 @@ import axios from 'axios';
 import { stringify } from 'qs';
 
 const axiosInstance = axios.create({
-  paramsSerializer: (params) => stringify(params)
+  paramsSerializer: (params) => stringify(params),
 });
 
 const resolveInterceptor = (response) => response.data || response;
@@ -37,7 +37,7 @@ grapqlInstance.interceptors.response.use(({ data }) => {
   if (data.errors) {
     throw {
       message: data.errors[0].errorType,
-      data: data.errors[0].message
+      data: data.errors[0].message,
     };
   }
 

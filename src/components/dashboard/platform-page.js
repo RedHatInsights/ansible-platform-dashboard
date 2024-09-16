@@ -12,43 +12,41 @@ import NoAppState from '../shared/no-app-state';
 const PlatformPage = () => {
   const intl = useIntl();
   const { isAnalyticsAvailable } = useSelector(
-    ({
-      analyticsReducer: {
-        isAnalyticsAvailable
-      }
-    }) => ({ isAnalyticsAvailable })
+    ({ analyticsReducer: { isAnalyticsAvailable } }) => ({
+      isAnalyticsAvailable,
+    })
   );
 
   const { isHubAvailable } = useSelector(
-    ({
-      hubReducer: {
-        isHubAvailable: isHubAvailable
-      }
-    }) => ({ isHubAvailable })
+    ({ hubReducer: { isHubAvailable: isHubAvailable } }) => ({ isHubAvailable })
   );
 
   if (!isAnalyticsAvailable && !isHubAvailable) {
-    return <NoAppState/>;
+    return <NoAppState />;
   }
 
   if (isHubAvailable && !isAnalyticsAvailable) {
-    return <ConfigureAppPage/>;
+    return <ConfigureAppPage />;
   }
 
-  return <React.Fragment>
-    <DashboardHeader title={ intl.formatMessage(messages.overview) }
-      description={ '' }/>
-    <PageSection>
-      <Stack hasGutter="md">
-        <StackItem>
-          <AnalyticsCard/>
-        </StackItem>
-        <StackItem>
-          <HubCard/>
-        </StackItem>
-      </Stack>
-    </PageSection>
-  </React.Fragment>;
+  return (
+    <React.Fragment>
+      <DashboardHeader
+        title={intl.formatMessage(messages.overview)}
+        description={''}
+      />
+      <PageSection>
+        <Stack hasGutter="md">
+          <StackItem>
+            <AnalyticsCard />
+          </StackItem>
+          <StackItem>
+            <HubCard />
+          </StackItem>
+        </Stack>
+      </PageSection>
+    </React.Fragment>
+  );
 };
 
 export default PlatformPage;

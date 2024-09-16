@@ -4,13 +4,14 @@ import store from './utilities/store';
 import App from './App';
 import PropTypes from 'prop-types';
 
-const AppEntry = () => (<Provider store={ store([]) }>
-  <App/>
-</Provider>
+const AppEntry = () => (
+  <Provider store={store([])}>
+    <App />
+  </Provider>
 );
 
 AppEntry.propTypes = {
-  logger: PropTypes.func
+  logger: PropTypes.func,
 };
 
 export default AppEntry;
