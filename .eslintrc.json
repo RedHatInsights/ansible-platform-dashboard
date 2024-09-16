@@ -43,7 +43,6 @@
     "key-spacing": 2,
     "keyword-spacing": 2,
     "linebreak-style": ["warn", "unix"],
-    "max-len": ["error", 150],
     "new-cap": 2,
     "no-bitwise": 2,
     "no-caller": 2,
@@ -99,9 +98,6 @@
     "wrap-iife": 2,
     "yoda": ["error", "never"],
     "react/prop-types": 2,
-    /**
-     * custom rules
-     */
     "prefer-const": "error",
     "react/jsx-equals-spacing": [2, "never"]
   }

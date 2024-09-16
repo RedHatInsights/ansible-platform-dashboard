@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { Skeleton } from '@redhat-cloud-services/frontend-components/Skeleton';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const AppPlaceholder = () => {
@@ -17,4 +17,9 @@ export const IconPlaceholder = ({ height }) => (
     <circle cx={height / 2} cy={height / 2} r={height / 2} fill="#ecebeb" />
   </svg>
 );
+
+IconPlaceholder.propTypes = {
+  height: PropTypes.number.isRequired,
+};
+
 export default AppPlaceholder;

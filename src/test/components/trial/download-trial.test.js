@@ -8,6 +8,7 @@ describe('downloadTrial', () => {
     const get = jest
       .fn()
       .mockResolvedValue({ body: { href: 'superfile.com' } });
+
     // eslint-disable-next-line no-import-assign
     downloadFile.default = jest.fn();
 

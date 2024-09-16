@@ -1,6 +1,6 @@
 import { PageSection } from '@patternfly/react-core';
 import classNames from 'classnames';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import './marketing-banner.scss';
 
@@ -36,12 +36,12 @@ const MarketingBanner = ({
 export default MarketingBanner;
 
 MarketingBanner.propTypes = {
-  children: propTypes.any.isRequired,
-  className: propTypes.string,
-  style: propTypes.any,
-  graphicRight: propTypes.bool,
-  hasGraphic: propTypes.bool,
-  light1000: propTypes.bool,
-  fullBleed: propTypes.bool,
-  isWidthLimited: propTypes.bool,
+  children: PropTypes.any.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.any,
+  graphicRight: PropTypes.bool,
+  hasGraphic: PropTypes.bool,
+  light1000: PropTypes.bool,
+  fullBleed: PropTypes.bool,
+  isWidthLimited: PropTypes.bool,
 };
