@@ -7,32 +7,40 @@ updates:
     groups:
       babel:
         patterns:
-          - "@babel/*"
+          - '@babel/*'
       eslint:
         patterns:
-          - "eslint"
-          - "eslint-config-*"
-          - "eslint-plugin-*"
+          - 'eslint'
+          - 'eslint-config-*'
+          - 'eslint-plugin-*'
       patternfly:
         patterns:
-          - "@patternfly/*"
+          - '@patternfly/*'
       react:
         patterns:
-          - "react"
-          - "react-dom"
+          - 'react'
+          - 'react-dom'
       redhat:
         patterns:
-          - "@redhat-cloud-services/*"
+          - '@redhat-cloud-services/*'
     ignore:
       - dependency-name: 'eslint'
-        update-types: ['version-update:semver-major']
+        update-types:
+          - 'version-update:semver-major'
       - dependency-name: 'react-redux'
-        update-types: ['version-update:semver-major']
+        update-types:
+          - 'version-update:semver-major'
       - dependency-name: 'redux'
-        update-types: ['version-update:semver-major']
+        update-types:
+          - 'version-update:semver-major'
       - dependency-name: 'redux-thunk'
-        update-types: ['version-update:semver-major']
+        update-types:
+          - 'version-update:semver-major'
       - dependency-name: 'sass'
+        update-types:
+          - 'version-update:semver-major'
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
