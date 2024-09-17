@@ -1,20 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './utilities/store';
-import App from './App';
-import { getBaseName } from '@redhat-cloud-services/frontend-components-utilities/helpers';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './utilities/store';
 
-const AppEntry = () => (<Provider store={ store([]) }>
-  <Router basename={ getBaseName(window.location.pathname, 1) }>
-    <App/>
-  </Router>
-</Provider>
+const AppEntry = () => (
+  <Provider store={store([])}>
+    <App />
+  </Provider>
 );
 
 AppEntry.propTypes = {
-  logger: PropTypes.func
+  logger: PropTypes.func,
 };
 
+// imported directly by fec
 export default AppEntry;

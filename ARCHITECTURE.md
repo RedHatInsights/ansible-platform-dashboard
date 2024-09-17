@@ -1,6 +1,6 @@
 # Architecture
 
-This repo's source code builds a static React app to be served on https://cloud.redhat.com.
+This repo's source code builds a static React app to be served on https://console.redhat.com.
 
 The React app bundled using [Webpack](https://webpack.js.org) includes:
   - [@patternfly/react-core](https://github.com/patternfly/patternfly-react) as the component library
@@ -18,4 +18,3 @@ These assets are loaded via [Insights chrome](https://github.com/RedHatInsights/
 This repo uses a [shared common config](https://www.npmjs.com/package/@redhat-cloud-services/frontend-components-config) with sensible defaults to build and run your application.
 
 This repo uses [federated modules](https://webpack.js.org/concepts/module-federation/) to seamlessly load multiple applications at runtime.
-

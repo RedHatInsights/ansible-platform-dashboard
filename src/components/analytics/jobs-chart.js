@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Chart, ChartAxis, ChartBar, ChartStack, ChartTooltip } from '@patternfly/react-charts';
-
+import {
+  Chart,
+  ChartAxis,
+  ChartBar,
+  ChartStack,
+  ChartTooltip,
+} from '@patternfly/react-charts';
+import c_content_small_FontSize from '@patternfly/react-tokens/dist/js/c_content_small_FontSize';
 import chart_color_green_400 from '@patternfly/react-tokens/dist/js/chart_color_green_400';
 import chart_color_red_300 from '@patternfly/react-tokens/dist/js/chart_color_red_300';
-import messages from '../../messages/messages';
+import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
-import c_content_small_FontSize from '@patternfly/react-tokens';
+import messages from '../../messages/messages';
 
 const JobsChart = (data) => {
-  const [ width, setWidth ] = useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
   const intl = useIntl();
 
   const handleResize = () => {
@@ -36,12 +41,16 @@ const JobsChart = (data) => {
         x: tick.x,
         y: tick.y.successful_count,
         name: 'Successful',
-        label: `${tick.x} Successful: ${tick.y.successful_count}`
+        label: `${tick.x} Successful: ${tick.y.successful_count}`,
       };
     });
-    return <ChartBar data={ successBars }
-      style={ { fill: chart_color_green_400.value } }
-      labelComponent={ <ChartTooltip constrainToVisibleArea /> } />;
+    return (
+      <ChartBar
+        data={successBars}
+        style={{ fill: chart_color_green_400.value }}
+        labelComponent={<ChartTooltip constrainToVisibleArea />}
+      />
+    );
   };
 
   const renderFailedJobs = () => {
@@ -50,12 +59,16 @@ const JobsChart = (data) => {
         x: tick.x,
         y: tick.y.failed_count,
         name: 'Failed',
-        label: `${tick.x} Failed: ${tick.y.failed_count}`
+        label: `${tick.x} Failed: ${tick.y.failed_count}`,
       };
     });
-    return <ChartBar data={ failBars }
-      style={ { fill: chart_color_red_300.value } }
-      labelComponent={ <ChartTooltip constrainToVisibleArea /> } />;
+    return (
+      <ChartBar
+        data={failBars}
+        style={{ fill: chart_color_red_300.value }}
+        labelComponent={<ChartTooltip constrainToVisibleArea />}
+      />
+    );
   };
 
   const getTickValues = () => {
@@ -70,55 +83,63 @@ const JobsChart = (data) => {
 
   const colorScaleArray = [
     chart_color_red_300.value,
-    chart_color_green_400.value
+    chart_color_green_400.value,
   ];
 
   const yAxisStyles = {
     tickLabels: {
-      fontSize: 10
+      fontSize: 10,
     },
     axisLabel: {
       padding: 45,
-      fontSize: c_content_small_FontSize
-    }
+      fontSize: c_content_small_FontSize,
+    },
   };
 
   const xAxisStyles = {
     tickLabels: {
-      fontSize: 10
+      fontSize: 10,
     },
     axisLabel: {
       padding: 30,
-      fontSize: c_content_small_FontSize
-    }
+      fontSize: c_content_small_FontSize,
+    },
   };
   return (
     <Chart
       ariaDesc="Jobs across clusters"
       ariaTitle="Jobs across clusters"
-      domainPadding={ { x: [ 30, 25 ]} }
-      barRatio={ 1 }
-      height={ 225 }
-      padding={ {
+      domainPadding={{ x: [30, 25] }}
+      barRatio={1}
+      height={225}
+      padding={{
         bottom: 60,
         left: 60,
         right: 20,
-        top: 20
-      } }
-      width={ width }
-      style={ { padding: 0, margin: 0 } }
+        top: 20,
+      }}
+      width={width}
+      style={{ padding: 0, margin: 0 }}
     >
-      <ChartAxis tickValues={ getTickValues() } fixLabelOverlap label={ intl.formatMessage(messages.timeDayLegend) } style={ xAxisStyles }/>
-      <ChartAxis dependentAxis
+      <ChartAxis
+        tickValues={getTickValues()}
+        fixLabelOverlap
+        label={intl.formatMessage(messages.timeDayLegend)}
+        style={xAxisStyles}
+      />
+      <ChartAxis
+        dependentAxis
         showGrid
-        tickFormat={ (t) => Math.round(t) }
-        label={ intl.formatMessage(messages.jobsAcrossClusters) }
-        style={ yAxisStyles }/>
-      <ChartStack colorScale={ colorScaleArray } domainPadding={ { x: [ 10, 2 ]} }>
-        { renderFailedJobs() }
-        { renderSuccessfulJobs() }
+        tickFormat={(t) => Math.round(t)}
+        label={intl.formatMessage(messages.jobsAcrossClusters)}
+        style={yAxisStyles}
+      />
+      <ChartStack colorScale={colorScaleArray} domainPadding={{ x: [10, 2] }}>
+        {renderFailedJobs()}
+        {renderSuccessfulJobs()}
       </ChartStack>
-    </Chart>);
+    </Chart>
+  );
 };
 
 export default JobsChart;

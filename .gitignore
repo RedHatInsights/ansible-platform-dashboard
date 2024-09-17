@@ -18,3 +18,10 @@ yarn-error.log*
 
 .DS_Store
 coverage
+
+.cache*
+core
+*.sw[po]
+*~
+
+translations/

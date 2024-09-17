@@ -1,13 +1,14 @@
-import { FETCH_CLUSTERS,
+import { defaultSettings } from '../../helpers/shared/pagination';
+import {
+  FETCH_CLUSTERS,
   FETCH_ERROR_NOTIFICATIONS,
-  FETCH_WARNING_NOTIFICATIONS,
   FETCH_JOBS,
-  SET_ANALYTICS_LOADING_STATE,
+  FETCH_WARNING_NOTIFICATIONS,
   SET_ANALYTICS_AVAILABILITY,
-  SET_ANALYTICS_ERROR
+  SET_ANALYTICS_ERROR,
+  SET_ANALYTICS_LOADING_STATE,
 } from '../action-types';
 
-import { defaultSettings } from '../../helpers/shared/pagination';
 // Initial State
 export const analyticsInitialState = {
   isLoading: false,
@@ -15,55 +16,55 @@ export const analyticsInitialState = {
   isError: false,
   clusters: {
     data: [],
-    meta: { ...defaultSettings }
+    meta: { ...defaultSettings },
   },
   errorNotifications: {
     notifications: [],
-    meta: { ...defaultSettings }
+    meta: { ...defaultSettings },
   },
   warningNotifications: {
     notifications: [],
-    meta: { ...defaultSettings }
+    meta: { ...defaultSettings },
   },
   jobsData: {
     data: [],
-    meta: { ...defaultSettings }
-  }
+    meta: { ...defaultSettings },
+  },
 };
 
 const setLoadingState = (state, payload = true) => ({
   ...state,
-  isLoading: payload
+  isLoading: payload,
 });
 
 const setAvailabilityState = (state, { payload = true }) => ({
   ...state,
-  isAnalyticsAvailable: payload
+  isAnalyticsAvailable: payload,
 });
 
 const setErrorState = (state, { payload = true }) => ({
   ...state,
-  isError: payload
+  isError: payload,
 });
 
 const setClusters = (state, payload) => ({
   ...state,
-  clusters: payload
+  clusters: payload,
 });
 
 const setErrorNotifications = (state, payload) => ({
   ...state,
-  errorNotifications: payload
+  errorNotifications: payload,
 });
 
 const setWarningNotifications = (state, payload) => ({
   ...state,
-  warningNotifications: payload
+  warningNotifications: payload,
 });
 
 const setJobsData = (state, payload) => ({
   ...state,
-  jobsData: payload
+  jobsData: payload,
 });
 
 export default {
@@ -77,5 +78,5 @@ export default {
   [`${FETCH_WARNING_NOTIFICATIONS}_FULFILLED`]: setWarningNotifications,
   [`${FETCH_WARNING_NOTIFICATIONS}_PENDING`]: setLoadingState,
   [`${FETCH_JOBS}_FULFILLED`]: setJobsData,
-  [`${FETCH_JOBS}_PENDING`]: setLoadingState
+  [`${FETCH_JOBS}_PENDING`]: setLoadingState,
 };

@@ -1,3 +1,4 @@
+import { defaultSettings } from '../../helpers/shared/pagination';
 import {
   FETCH_COLLECTION,
   FETCH_COLLECTIONS,
@@ -5,10 +6,9 @@ import {
   FETCH_SYNC_COLLECTIONS,
   SET_HUB_AVAILABILITY,
   SET_HUB_ERROR,
-  SET_HUB_LOADING_STATE
+  SET_HUB_LOADING_STATE,
 } from '../action-types';
 
-import { defaultSettings } from '../../helpers/shared/pagination';
 // Initial State
 export const hubInitialState = {
   isLoading: false,
@@ -17,50 +17,50 @@ export const hubInitialState = {
   collection: {},
   collections: {
     data: [],
-    meta: { ...defaultSettings }
+    meta: { ...defaultSettings },
   },
   partners: {
     data: [],
-    meta: { ...defaultSettings }
+    meta: { ...defaultSettings },
   },
   syncCollections: {
     data: [],
-    meta: { ...defaultSettings }
-  }
+    meta: { ...defaultSettings },
+  },
 };
 
 const setLoadingState = (state, { payload = true }) => ({
   ...state,
-  isLoading: payload
+  isLoading: payload,
 });
 
 const setAvailabilityState = (state, { payload = true }) => ({
   ...state,
-  isHubAvailable: payload
+  isHubAvailable: payload,
 });
 
 const setErrorState = (state, { payload = true }) => ({
   ...state,
-  isError: payload
+  isError: payload,
 });
 const setCollections = (state, { payload }) => ({
   ...state,
-  collections: payload
+  collections: payload,
 });
 
 const setCollection = (state, { payload }) => ({
   ...state,
-  collection: payload
+  collection: payload,
 });
 
 const setPartners = (state, { payload }) => ({
   ...state,
-  partners: payload
+  partners: payload,
 });
 
 const setSyncCollections = (state, { payload }) => ({
   ...state,
-  syncCollections: payload
+  syncCollections: payload,
 });
 
 export default {
@@ -75,5 +75,5 @@ export default {
   [`${FETCH_PARTNERS}_FULFILLED`]: setPartners,
   [`${FETCH_SYNC_COLLECTIONS}_PENDING`]: setLoadingState,
   [`${FETCH_SYNC_COLLECTIONS}_FULFILLED`]: setSyncCollections,
-  [`${FETCH_PARTNERS}_PENDING`]: setLoadingState
+  [`${FETCH_PARTNERS}_PENDING`]: setLoadingState,
 };
