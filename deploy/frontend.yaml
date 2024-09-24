@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: ansible-platform-dashboard-frontend
+objects:
+  - apiVersion: cloud.redhat.com/v1alpha1
+    kind: Frontend
+    metadata:
+      name: ansible-dashboard
+    spec:
+      envName: ${ENV_NAME}
+      title: ansible-dashboard
+      deploymentRepo: https://github.com/RedHatInsights/ansible-platform-dashboard
+      API:
+        versions:
+          - v1
+      frontend:
+        paths:
+          - /apps/ansible-dashboard
+      image: ${IMAGE}:${IMAGE_TAG}
+      navItems:
+        - id: "overview"
+          appId: "ansibleDashboard"
+          title: "Overview"
+          filterable: false
+          href: "/ansible/ansible-dashboard"
+          icon: "AnsibleIcon"
+      module:
+        manifestLocation: "/apps/ansible-dashboard/fed-mods.json"
+        modules:
+          - id: "ansible-dashboard"
+            module: "./RootApp"
+            routes:
+              - pathname: /ansible
+              - pathname: /ansible/ansible-dashboard
+
+parameters:
+  - name: ENV_NAME
+    required: true
+  - name: IMAGE_TAG
+    required: true
+  - name: IMAGE
+    value: quay.io/cloudservices/ansible-platform-dashboard
