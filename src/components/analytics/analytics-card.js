@@ -154,7 +154,7 @@ const AnalyticsCard = () => {
               <DescriptionListDescription>
                 {clusters?.payload?.templates?.length || 0}
                 <br />
-                <Link to={`${release}ansible/insights/clusters`}>
+                <Link to={`${release}ansible/automation-analytics/clusters`}>
                   {intl.formatMessage(messages.totalClusters)}
                 </Link>
               </DescriptionListDescription>
@@ -180,7 +180,7 @@ const AnalyticsCard = () => {
             <Button
               component="a"
               variant="link"
-              href={`${release}ansible/insights/job-explorer`}
+              href={`${release}ansible/automation-analytics/job-explorer`}
             >
               {intl.formatMessage(messages.jobsExplorer)}
             </Button>
