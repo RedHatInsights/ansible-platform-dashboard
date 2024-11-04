@@ -103,86 +103,70 @@ const HubCard = () => {
           <br />
         </Text>
       </TextContent>
-      <Flex>
-        <Flex
-          direction={{ default: 'column' }}
-          className="pf-v5-u-m-0 pf-v5-u-pr-sm"
-        >
-          <FlexItem
-            align={{ default: 'alignRight' }}
-            className="pf-v5-u-mb-sm pf-v5-u-mt-md"
+      <Grid hasGutter>
+        <GridItem align="right" span={2}>
+          <TextContent>
+            <Text component={TextVariants.h1}>{partners?.meta?.count}</Text>
+          </TextContent>
+        </GridItem>
+        <GridItem span={10}>
+          <Button
+            component="a"
+            variant="link"
+            href={`${release}ansible/automation-hub/partners`}
           >
-            <TextContent>
-              <Text component={TextVariants.h1}>{partners?.meta?.count}</Text>
-            </TextContent>
-          </FlexItem>
-          <FlexItem
-            align={{ default: 'alignRight' }}
-            className="pf-v5-u-mb-sm pf-v5-u-mt-md"
+            {intl.formatMessage(messages.partners)}
+          </Button>
+        </GridItem>
+
+        <GridItem align="right" span={2}>
+          <TextContent>
+            <Text component={TextVariants.h1}>{collections?.meta?.count}</Text>
+          </TextContent>
+        </GridItem>
+        <GridItem span={10}>
+          <Button
+            component="a"
+            variant="link"
+            href={`${release}ansible/automation-hub`}
           >
-            <TextContent>
-              <Text component={TextVariants.h1}>
-                {collections?.meta?.count}
-              </Text>
-            </TextContent>
-          </FlexItem>
-          <FlexItem
-            align={{ default: 'alignRight' }}
-            className="pf-v5-u-mb-sm pf-v5-u-mt-md"
-          >
-            <TextContent>
-              <Text component={TextVariants.h1}>
-                {syncCollections?.meta?.count}
-              </Text>
-            </TextContent>
-          </FlexItem>
-        </Flex>
-        <Flex direction={{ default: 'column' }}>
-          <FlexItem>
-            <Button
-              component="a"
-              variant="link"
-              href={`${release}ansible/automation-hub/partners`}
-            >
-              {intl.formatMessage(messages.partners)}
-            </Button>
-          </FlexItem>
-          <FlexItem>
-            <Button
-              component="a"
-              variant="link"
-              href={`${release}ansible/automation-hub`}
-            >
-              {intl.formatMessage(messages.collections)}
-            </Button>
-          </FlexItem>
-          <FlexItem>
-            <Level hasGutter className="pf-v5-u-pl-md pf-v5-u-pt-sm">
-              <LevelItem style={{ marginRight: 8 }}>
-                {intl.formatMessage(messages.syncCollections)}
-              </LevelItem>
-              <LevelItem>
-                <Popover
-                  headerContent={
-                    <div>{intl.formatMessage(messages.syncCollections)}</div>
-                  }
-                  bodyContent={
-                    <div>
-                      {intl.formatMessage(messages.syncCollectionsTooltip)}
-                    </div>
-                  }
-                >
-                  <Button
-                    variant="link"
-                    style={{ padding: 0 }}
-                    icon={<OutlinedQuestionCircleIcon />}
-                  />
-                </Popover>
-              </LevelItem>
-            </Level>
-          </FlexItem>
-        </Flex>
-      </Flex>
+            {intl.formatMessage(messages.collections)}
+          </Button>
+        </GridItem>
+
+        <GridItem align="right" span={2}>
+          <TextContent>
+            <Text component={TextVariants.h1}>
+              {syncCollections?.meta?.count}
+            </Text>
+          </TextContent>
+        </GridItem>
+        <GridItem span={10}>
+          <Level hasGutter className="pf-v5-u-pl-md pf-v5-u-pt-sm">
+            <LevelItem style={{ marginRight: 8 }}>
+              {intl.formatMessage(messages.syncCollections)}
+            </LevelItem>
+            <LevelItem>
+              <Popover
+                headerContent={
+                  <div>{intl.formatMessage(messages.syncCollections)}</div>
+                }
+                bodyContent={
+                  <div>
+                    {intl.formatMessage(messages.syncCollectionsTooltip)}
+                  </div>
+                }
+              >
+                <Button
+                  variant="link"
+                  style={{ padding: 0 }}
+                  icon={<OutlinedQuestionCircleIcon />}
+                />
+              </Popover>
+            </LevelItem>
+          </Level>
+        </GridItem>
+      </Grid>
     </>
   );
 
