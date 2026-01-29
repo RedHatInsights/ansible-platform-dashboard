@@ -41,7 +41,7 @@ const App = () => {
         <IntlProvider locale="en">
           <>
             <NotificationsPortal />
-            <section className="ans-c-dashboard pf-v5-c-page__main-section pf-v5-l-page__main-section pf-v5-u-p-0 pf-v5-u-ml-0">
+            <section className="ans-c-dashboard pf-v6-c-page__main-section pf-v6-l-page__main-section pf-v6-u-p-0 pf-v6-u-ml-0">
               <Routes />
             </section>
           </>
