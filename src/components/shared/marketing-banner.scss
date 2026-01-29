@@ -7,20 +7,20 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
   --ins-c-marketing-banner--before--BackgroundSize: #{pf-size-prem(300px)};
 
   --ins-c-marketing-banner--PaddingTop: var(
-    --pf-c-page__main-section--PaddingTop,
-    var(--pf-global--spacer--2xl)
+    --pf-v6-c-page__main-section--PaddingTop,
+    var(--pf-t--global--spacer--2xl)
   );
   --ins-c-marketing-banner--PaddingRight: var(
-    --pf-c-page__main-section--PaddingRight,
-    var(--pf-global--spacer--md)
+    --pf-v6-c-page__main-section--PaddingRight,
+    var(--pf-t--global--spacer--md)
   );
   --ins-c-marketing-banner--PaddingBottom: var(
-    --pf-c-page__main-section--PaddingBottom,
-    var(--pf-global--spacer--2xl)
+    --pf-v6-c-page__main-section--PaddingBottom,
+    var(--pf-t--global--spacer--2xl)
   );
   --ins-c-marketing-banner--PaddingLeft: var(
-    --pf-c-page__main-section--PaddingLeft,
-    var(--pf-global--spacer--md)
+    --pf-v6-c-page__main-section--PaddingLeft,
+    var(--pf-t--global--spacer--md)
   );
 
   --ins-c-marketing-banner--before--content--width: 2fr;
@@ -54,7 +54,7 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
 
   &.ans-m-with-graphic {
     &:not(.pf-m-limit-width),
-    .pf-c-page__main-body {
+    .pf-v6-c-page__main-body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: 'content';
