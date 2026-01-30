@@ -8,7 +8,7 @@ import ConfigureCard from '../shared/configure-card';
 const renderAnalyticsConfigButton = (intl) => (
   <Flex>
     <FlexItem>
-      <Button
+      <Button icon={<ExternalLinkAltIcon />}
         component="a"
         variant="link"
         target="_blank"
@@ -16,7 +16,7 @@ const renderAnalyticsConfigButton = (intl) => (
         href={`https://docs.ansible.com/ansible-tower/latest/html/administration/usability_data_collection.html`}
       >
         {intl.formatMessage(messages.configureAnalyticsLink)}&nbsp;
-        <ExternalLinkAltIcon />
+        
       </Button>
     </FlexItem>
   </Flex>

@@ -36,7 +36,7 @@ const renderButtons = (intl) => (
 const renderAnalyticsConfigButton = (intl) => (
   <Flex>
     <FlexItem>
-      <Button
+      <Button icon={<ExternalLinkAltIcon />}
         component="a"
         variant="link"
         target="_blank"
@@ -44,7 +44,7 @@ const renderAnalyticsConfigButton = (intl) => (
         href={`https://docs.ansible.com/ansible-tower/latest/html/administration/usability_data_collection.html`}
       >
         {intl.formatMessage(messages.configureAnalyticsLink)}&nbsp;
-        <ExternalLinkAltIcon />
+        
       </Button>
     </FlexItem>
   </Flex>
@@ -60,7 +60,7 @@ const ConfigureAppPage = () => {
         description={intl.formatMessage(messages.configDescription)}
         renderButtons={() => renderButtons(intl)}
       />
-      <PageSection>
+      <PageSection hasBodyWrapper={false}>
         <Stack hasGutter="md">
           <StackItem>
             <Grid hasGutter="xl">

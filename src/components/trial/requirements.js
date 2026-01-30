@@ -2,7 +2,7 @@ import {
   Button,
   Stack,
   StackItem,
-  TextContent,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
@@ -25,11 +25,11 @@ const Requirements = ({ afterTrial }) => {
 
   return (
     <>
-      <TextContent>
+      <Content>
         <Title headingLevel="h2" size="lg" className="pf-u-mb-lg">
           {intl.formatMessage(trialMessages.reqCardHeader)}
         </Title>
-      </TextContent>
+      </Content>
       <Stack>
         <StackItem>
           <div className="pf-u-display-flex">
@@ -37,7 +37,7 @@ const Requirements = ({ afterTrial }) => {
               <pfe-icon icon="rh-icon-install" size="lg" />
             </div>
             <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-              <TextContent>
+              <Content>
                 <Title headingLevel="h2" size="lg" className="pf-u-mb-sm">
                   {intl.formatMessage(trialMessages.reqCardRHELTitle)}
                 </Title>
@@ -57,7 +57,7 @@ const Requirements = ({ afterTrial }) => {
                     </Button>
                   ),
                 })}
-              </TextContent>
+              </Content>
             </div>
           </div>
         </StackItem>
@@ -67,7 +67,7 @@ const Requirements = ({ afterTrial }) => {
               <pfe-icon icon="rh-icon-clock-time-pass" size="lg" />
             </div>
             <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-              <TextContent>
+              <Content>
                 <Title headingLevel="h2" size="lg" className="pf-u-mb-sm">
                   {intl.formatMessage(trialMessages.reqCardBreakTitle)}
                 </Title>
@@ -78,7 +78,7 @@ const Requirements = ({ afterTrial }) => {
                     </Link>
                   ),
                 })}
-              </TextContent>
+              </Content>
             </div>
           </div>
         </StackItem>

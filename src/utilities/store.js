@@ -1,5 +1,6 @@
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
-import { notificationsReducer } from '@redhat-cloud-services/frontend-components-notifications/redux';
+import notificationsMiddleware, {
+  notificationsReducer,
+} from '../notificationsShim';
 import ReducerRegistry, {
   applyReducerHash,
 } from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';

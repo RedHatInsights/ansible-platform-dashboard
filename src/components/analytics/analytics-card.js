@@ -11,7 +11,7 @@ import {
   FlexItem,
   Label,
   Spinner,
-  Text,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
@@ -96,7 +96,7 @@ const AnalyticsCard = () => {
     return (
       <>
         <DescriptionList
-          className="pf-v5-c-description-list.pf-v5-m-vertical"
+          className="pf-v6-c-description-list.pf-v6-m-vertical"
           columnModifier={{
             default: '2Col',
           }}
@@ -109,7 +109,7 @@ const AnalyticsCard = () => {
             {errorNotifications?.payload?.meta?.count || 0}
             <p />
             <Label
-              className={'pf-v5-m-small'}
+              className={'pf-v6-m-small'}
               color="red"
               icon={<InfoCircleIcon />}
               href={`${release}ansible/automation-analytics/notifications?default.severity=error`}
@@ -138,12 +138,12 @@ const AnalyticsCard = () => {
       <>
         <Flex className=" ans-l-flex ans-l-flex-automation-analytics-info">
           <FlexItem>
-            <Text>{intl.formatMessage(messages.analyticsCardDescription)}</Text>
+            <Content component="p">{intl.formatMessage(messages.analyticsCardDescription)}</Content>
             <br />
           </FlexItem>
           <FlexItem>
             <DescriptionList
-              className="pf-v5-c-description-list.pf-v5-m-vertical"
+              className="pf-v6-c-description-list.pf-v6-m-vertical"
               columnModifier={{
                 default: '1Col',
               }}
@@ -172,10 +172,10 @@ const AnalyticsCard = () => {
       </Title>
       <br />
       <Flex direction={{ default: 'column' }}>
-        <FlexItem className="pf-v5-u-m-0">
+        <FlexItem className="pf-v6-u-m-0">
           <JobsChart items={jobsData?.payload?.items} />
         </FlexItem>
-        <FlexItem className="pf-v5-u-m-0 pf-v5-u-pt-0 pf-v5-u-pb-0 pf-v5-u-pl-lg">
+        <FlexItem className="pf-v6-u-m-0 pf-v6-u-pt-0 pf-v6-u-pb-0 pf-v6-u-pl-lg">
           <Bullseye>
             <Button
               component="a"
@@ -229,7 +229,7 @@ const AnalyticsCard = () => {
             {intl.formatMessage(messages.analyticsTitle)}
           </Title>
         </CardTitle>
-        <CardBody className="pf-v5-u-pb-sm">{renderAnalyticsCards()}</CardBody>
+        <CardBody className="pf-v6-u-pb-sm">{renderAnalyticsCards()}</CardBody>
       </Card>
     </>
   );

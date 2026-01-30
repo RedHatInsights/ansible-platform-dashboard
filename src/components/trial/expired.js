@@ -14,8 +14,7 @@ import {
   PageSection,
   Stack,
   StackItem,
-  Text,
-  TextContent,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import ExclamationIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
@@ -55,7 +54,7 @@ const Expired = () => {
             {intl.formatMessage(expiredMessages.trialExpired)}
           </BreadcrumbItem>
         </Breadcrumb>
-        <TextContent>
+        <Content>
           <Flex
             spaceItems={{ default: 'spaceItemsSm' }}
             alignItems={{ default: 'alignItemsCenter' }}
@@ -72,12 +71,12 @@ const Expired = () => {
               </Title>
             </FlexItem>
           </Flex>
-          <Text className="pf-u-mt-md">
+          <Content component="p" className="pf-u-mt-md">
             {intl.formatMessage(expiredMessages.description)}
-          </Text>
-        </TextContent>
+          </Content>
+        </Content>
       </PageHeader>
-      <PageSection>
+      <PageSection hasBodyWrapper={false}>
         <Stack hasGutter>
           <StackItem>
             <Card>
@@ -87,13 +86,13 @@ const Expired = () => {
                 </Title>
                 <div className="pf-u-display-flex">
                   <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-                    <TextContent>
-                      <Text>
+                    <Content>
+                      <Content component="p">
                         {intl.formatMessage(expiredMessages.wannaTryText, {
                           date: '',
                         })}
-                      </Text>
-                    </TextContent>
+                      </Content>
+                    </Content>
                   </div>
                   <Logo />
                 </div>
@@ -106,8 +105,8 @@ const Expired = () => {
                     <pfe-icon icon="rh-icon-support" size="lg" />
                   </div>
                   <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-                    <TextContent>
-                      <Text>
+                    <Content>
+                      <Content component="p">
                         {intl.formatMessage(expiredMessages.readyBuyText, {
                           a: (chunks) => (
                             <Link link="https://www.redhat.com/en/about/value-of-subscription">
@@ -115,13 +114,13 @@ const Expired = () => {
                             </Link>
                           ),
                         })}
-                      </Text>
-                    </TextContent>
+                      </Content>
+                    </Content>
                   </div>
                 </div>
                 <Grid hasGutter>
                   <GridItem md={6}>
-                    <Card isFlat className="pf-u-px-md pf-u-h-100">
+                    <Card  className="pf-u-px-md pf-u-h-100">
                       <CardTitle>
                         {intl.formatMessage(expiredMessages.sales)}
                       </CardTitle>
@@ -141,7 +140,7 @@ const Expired = () => {
                     </Card>
                   </GridItem>
                   <GridItem md={6}>
-                    <Card isFlat className="pf-u-px-md pf-u-h-100">
+                    <Card  className="pf-u-px-md pf-u-h-100">
                       <CardTitle>
                         {intl.formatMessage(expiredMessages.partners)}
                       </CardTitle>

@@ -5,8 +5,7 @@ import {
   CardFooter,
   Grid,
   GridItem,
-  Text,
-  TextContent,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
@@ -20,22 +19,22 @@ const Resources = () => {
 
   return (
     <>
-      <TextContent>
+      <Content>
         <Title headingLevel="h2" size="xl">
           {intl.formatMessage(successMessages.resources)}
         </Title>
-        <Text className="pf-u-mb-lg">
+        <Content component="p" className="pf-u-mb-lg">
           {intl.formatMessage(successMessages.resourcesDescription)}
-        </Text>
-      </TextContent>
+        </Content>
+      </Content>
       <Grid hasGutter>
         <GridItem md={6}>
-          <Card isFlat className="pf-u-px-md pf-u-h-100">
+          <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
               {intl.formatMessage(successMessages.instructionsText)}
             </CardBody>
             <CardFooter>
-              <Button
+              <Button icon={<ArrowRightIcon />}
                 variant="link"
                 size="lg"
                 isInline
@@ -45,18 +44,18 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.instructionsLink)}{' '}
-                <ArrowRightIcon />
+                
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
         <GridItem md={6}>
-          <Card isFlat className="pf-u-px-md pf-u-h-100">
+          <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
               {intl.formatMessage(successMessages.documentationText)}
             </CardBody>
             <CardFooter>
-              <Button
+              <Button icon={<ArrowRightIcon />}
                 variant="link"
                 size="lg"
                 isInline
@@ -66,18 +65,18 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.documentationLink)}{' '}
-                <ArrowRightIcon />
+                
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
         <GridItem md={6}>
-          <Card isFlat className="pf-u-px-md pf-u-h-100">
+          <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
               {intl.formatMessage(successMessages.otherVersionsText)}
             </CardBody>
             <CardFooter>
-              <Button
+              <Button icon={<ArrowRightIcon />}
                 variant="link"
                 size="lg"
                 isInline
@@ -87,18 +86,18 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.otherVersionsLink)}{' '}
-                <ArrowRightIcon />
+                
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
         <GridItem md={6}>
-          <Card isFlat className="pf-u-px-md pf-u-h-100">
+          <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
               {intl.formatMessage(successMessages.customerServiceText)}
             </CardBody>
             <CardFooter>
-              <Button
+              <Button icon={<ArrowRightIcon />}
                 variant="link"
                 size="lg"
                 isInline
@@ -108,7 +107,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.customrServiceLink)}{' '}
-                <ArrowRightIcon />
+                
               </Button>
             </CardFooter>
           </Card>

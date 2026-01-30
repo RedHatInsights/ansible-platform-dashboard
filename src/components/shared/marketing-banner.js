@@ -23,7 +23,7 @@ const MarketingBanner = ({
   );
 
   return (
-    <PageSection
+    <PageSection hasBodyWrapper
       className={MarketingBannerSectionClasses}
       style={style}
       isWidthLimited

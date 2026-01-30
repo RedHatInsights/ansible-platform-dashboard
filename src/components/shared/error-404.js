@@ -1,7 +1,6 @@
 import {
   EmptyState,
   EmptyStateBody,
-  EmptyStateIcon,
   Title,
 } from '@patternfly/react-core';
 import PathMissingIcon from '@patternfly/react-icons/dist/dynamic/icons/path-missing-icon';
@@ -12,14 +11,9 @@ import { Link } from 'react-router-dom';
 const Error404 = (props) => {
   const { title, body, link, buttonText } = props;
   return (
-    <EmptyState variant={'full'}>
-      <Title headingLevel="h4" size={'4xl'} style={{ padding: '2em' }}>
+    <EmptyState titleText={<Title headingLevel="h4" size={'4xl'} style={{ padding: '2em' }}>
         {title}
-      </Title>
-      <EmptyStateIcon
-        icon={PathMissingIcon}
-        class="pf-v5-global--icon--FontSize--xl"
-      />
+      </Title>} icon={PathMissingIcon} variant={'full'}>
       <EmptyStateBody>{body}</EmptyStateBody>
       <Link to={link.replace('/', '')}>{buttonText}</Link>
     </EmptyState>

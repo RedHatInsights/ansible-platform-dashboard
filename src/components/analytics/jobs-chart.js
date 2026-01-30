@@ -1,13 +1,14 @@
 import {
-  Chart,
-  ChartAxis,
-  ChartBar,
-  ChartStack,
-  ChartTooltip,
-} from '@patternfly/react-charts';
-import c_content_small_FontSize from '@patternfly/react-tokens/dist/js/c_content_small_FontSize';
-import chart_color_green_400 from '@patternfly/react-tokens/dist/js/chart_color_green_400';
-import chart_color_red_300 from '@patternfly/react-tokens/dist/js/chart_color_red_300';
+	Chart,
+	ChartAxis,
+	ChartBar,
+	ChartStack,
+	ChartTooltip
+} from '@patternfly/react-charts/victory';
+import {
+  t_chart_color_green_300 as chart_color_green_400,
+  t_chart_color_red_orange_300 as chart_color_red_300,
+} from '@patternfly/react-tokens';
 import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
@@ -92,7 +93,7 @@ const JobsChart = (data) => {
     },
     axisLabel: {
       padding: 45,
-      fontSize: c_content_small_FontSize,
+      fontSize: 12,
     },
   };
 
@@ -102,7 +103,7 @@ const JobsChart = (data) => {
     },
     axisLabel: {
       padding: 30,
-      fontSize: c_content_small_FontSize,
+      fontSize: 12,
     },
   };
   return (

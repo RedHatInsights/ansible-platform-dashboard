@@ -6,7 +6,7 @@ describe('Redux store', () => {
     const expectedState = {
       analyticsReducer: expect.any(Object),
       hubReducer: expect.any(Object),
-      notifications: [],
+      notifications: { notifications: [] },
     };
     expect(dashboardStore.dispatch).toBeInstanceOf(Function);
     expect(dashboardStore.getState).toBeInstanceOf(Function);

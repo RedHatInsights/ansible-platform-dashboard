@@ -18,7 +18,7 @@ const renderButtons = (intl) => (
       </Button>
     </FlexItem>
     <FlexItem>
-      <Button
+      <Button icon={<ArrowRightIcon />}
         component="a"
         size="lg"
         variant="link"
@@ -27,7 +27,7 @@ const renderButtons = (intl) => (
         href="https://www.redhat.com/en/technologies/management/ansible"
       >
         {intl.formatMessage(messages.learnMoreButton)} &nbsp;
-        <ArrowRightIcon />
+        
       </Button>
     </FlexItem>
   </Flex>
