@@ -10,10 +10,7 @@ import {
   PageSection,
   Stack,
   StackItem,
-  Text,
-  TextContent,
-  TextList,
-  TextListItem,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
@@ -62,7 +59,7 @@ const Success = () => {
             {intl.formatMessage(successMessages.download)}
           </BreadcrumbItem>
         </Breadcrumb>
-        <TextContent>
+        <Content>
           <Flex
             spaceItems={{ default: 'spaceItemsSm' }}
             alignItems={{ default: 'alignItemsCenter' }}
@@ -79,15 +76,15 @@ const Success = () => {
               </Title>
             </FlexItem>
           </Flex>
-          <Text className="pf-u-mt-md">
+          <Content component="p" className="pf-u-mt-md">
             {intl.formatMessage(successMessages.description)}
-          </Text>
-          <Text component="small">
+          </Content>
+          <Content component="small">
             {intl.formatMessage(successMessages.titleFooter)}
-          </Text>
-        </TextContent>
+          </Content>
+        </Content>
       </PageHeader>
-      <PageSection>
+      <PageSection hasBodyWrapper={false}>
         <Stack hasGutter>
           <StackItem>
             <Card>
@@ -104,7 +101,7 @@ const Success = () => {
                       <pfe-icon icon="rh-icon-install" size="lg" />
                     </div>
                     <div className="pf-u-align-self-center pf-u-flex-grow-1">
-                      <TextContent>
+                      <Content>
                         <Button
                           icon={<DownloadIcon />}
                           className="pf-u-mb-md"
@@ -112,7 +109,7 @@ const Success = () => {
                         >
                           {intl.formatMessage(successMessages.startDownload)}
                         </Button>
-                        <Text>
+                        <Content component="p">
                           {intl.formatMessage(successMessages.downloadNote, {
                             a: (chunks) => (
                               <Link link="https://access.redhat.com/downloads/content/480">
@@ -120,8 +117,8 @@ const Success = () => {
                               </Link>
                             ),
                           })}
-                        </Text>
-                      </TextContent>
+                        </Content>
+                      </Content>
                     </div>
                   </Flex>
                   <Logo />
@@ -129,7 +126,7 @@ const Success = () => {
                 <Divider className="pf-u-my-lg" />
                 <Requirements afterTrial />
                 <Divider className="pf-u-my-lg" />
-                <TextContent>
+                <Content>
                   <Title headingLevel="h2" size="xl">
                     {intl.formatMessage(successMessages.nextSteps)}
                   </Title>
@@ -147,15 +144,15 @@ const Success = () => {
                       <Title headingLevel="h2" size="xl">
                         {intl.formatMessage(successMessages.deployAnsible)}
                       </Title>
-                      <TextContent>
+                      <Content>
                         {intl.formatMessage(successMessages.deployAnsibleText, {
                           ul: (chunks) => (
-                            <TextList className="pf-u-ml-0">{chunks}</TextList>
+                            <Content component="ul" className="pf-u-ml-0">{chunks}</Content>
                           ),
                           li: (chunks) => (
-                            <TextListItem className="pf-u-mt-0">
+                            <Content component="li" className="pf-u-mt-0">
                               {chunks}
-                            </TextListItem>
+                            </Content>
                           ),
                           a: (chunks) => (
                             <Link link="https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_installation_guide/index">
@@ -173,7 +170,7 @@ const Success = () => {
                             </Link>
                           ),
                         })}
-                      </TextContent>
+                      </Content>
                     </div>
                   </div>
                   <div className="pf-u-display-flex">
@@ -190,7 +187,7 @@ const Success = () => {
                       <Title headingLevel="h2" size="xl">
                         {intl.formatMessage(successMessages.learnAnsible)}
                       </Title>
-                      <TextContent>
+                      <Content>
                         {intl.formatMessage(successMessages.learnAnsibleText, {
                           a: (chunks) => (
                             <Link link="https://www.redhat.com/en/technologies/management/ansible/features#automation-execution-environments">
@@ -198,10 +195,10 @@ const Success = () => {
                             </Link>
                           ),
                         })}
-                      </TextContent>
+                      </Content>
                     </div>
                   </div>
-                </TextContent>
+                </Content>
               </CardBody>
             </Card>
           </StackItem>
@@ -216,11 +213,11 @@ const Success = () => {
                     <pfe-icon icon="rh-icon-support" size="lg" />
                   </div>
                   <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-                    <TextContent>
-                      <Text>
+                    <Content>
+                      <Content component="p">
                         {intl.formatMessage(successMessages.supportText)}
-                      </Text>
-                    </TextContent>
+                      </Content>
+                    </Content>
                   </div>
                 </div>
                 <Divider className="pf-u-my-lg" />
