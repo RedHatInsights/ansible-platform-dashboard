@@ -44,7 +44,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.instructionsLink)}{' '}
-                
+
               </Button>
             </CardFooter>
           </Card>
@@ -65,7 +65,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.documentationLink)}{' '}
-                
+
               </Button>
             </CardFooter>
           </Card>
@@ -86,7 +86,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.otherVersionsLink)}{' '}
-                
+
               </Button>
             </CardFooter>
           </Card>
@@ -107,7 +107,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
               >
                 {intl.formatMessage(successMessages.customrServiceLink)}{' '}
-                
+
               </Button>
             </CardFooter>
           </Card>

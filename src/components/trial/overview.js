@@ -36,7 +36,7 @@ const Overview = () => {
   const createAccordionItem = (index, values) => (
     <AccordionItem isExpanded={activeFaq === index}>
       <AccordionToggle
-        
+
         onClick={onClick(index)}
       >
         {intl.formatMessage(trialMessages[`faq${index}a`])}

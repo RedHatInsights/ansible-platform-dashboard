@@ -35,6 +35,7 @@ import {
 } from '../../redux/actions/hub-actions';
 import UserContext from '../../user-context';
 import { release } from '../../utilities/app-history';
+import { useNotifications } from '@redhat-cloud-services/frontend-components-notifications/hooks';
 import ErrorCard from '../shared/error-card';
 import { contentCounts } from './content-counts';
 import { Logo } from './logo';
@@ -72,27 +73,68 @@ const HubCard = () => {
 
   const dispatch = useDispatch();
   const intl = useIntl();
+  const { addNotification } = useNotifications();
 
   useEffect(() => {
-    stateDispatch({ type: 'setFetching', payload: true });
-    Promise.all([
-      dispatch(fetchCollections()),
-      dispatch(fetchPartners()),
-      dispatch(fetchSyncCollections(userIdentity?.identity?.account_number)),
-    ]).then(() => stateDispatch({ type: 'setFetching', payload: false }));
-  }, []);
-
-  useEffect(() => {
-    if (collections?.meta?.count > 0) {
-      const d = new Date();
-      const day = d.getDate();
-      const count = collections?.meta?.count;
+    const loadHubData = async () => {
       stateDispatch({ type: 'setFetching', payload: true });
-      dispatch(fetchCollection(count <= day ? count - 1 : day - 1)).then(() =>
-        stateDispatch({ type: 'setFetching', payload: false }),
+
+      const results = await Promise.all([
+        dispatch(fetchCollections()),
+        dispatch(fetchPartners()),
+        dispatch(fetchSyncCollections(userIdentity?.identity?.account_number)),
+      ]);
+
+      // Check if any requests failed (excluding 404s which are handled by availability flags)
+      const failures = results.filter(
+        result => !result.success && result.error?.status !== 404
       );
-    }
-  }, [collections]);
+
+      if (failures.length > 0) {
+        // Show notification only for unexpected errors (not 404s)
+        const firstError = failures[0].error;
+        addNotification({
+          dismissable: true,
+          title: firstError.title,
+          description: firstError.description,
+          variant: 'danger',
+        });
+      }
+
+      stateDispatch({ type: 'setFetching', payload: false });
+    };
+
+    loadHubData();
+  }, [dispatch, userIdentity?.identity?.account_number, addNotification]);
+
+  useEffect(() => {
+    const loadFeaturedCollection = async () => {
+      if (collections?.meta?.count > 0) {
+        const d = new Date();
+        const day = d.getDate();
+        const count = collections?.meta?.count;
+        const offset = count <= day ? count - 1 : day - 1;
+
+        stateDispatch({ type: 'setFetching', payload: true });
+
+        const result = await dispatch(fetchCollection(offset));
+
+        // Only show notification for unexpected errors (not 404s)
+        if (!result.success && result.error?.status !== 404) {
+          addNotification({
+            dismissable: true,
+            title: result.error.title,
+            description: result.error.description,
+            variant: 'danger',
+          });
+        }
+
+        stateDispatch({ type: 'setFetching', payload: false });
+      }
+    };
+
+    loadFeaturedCollection();
+  }, [collections, dispatch, addNotification]);
 
   const renderHubInfo = () => (
     <>
@@ -322,7 +364,7 @@ const HubCard = () => {
                   }
                 >
                   {intl.formatMessage(messages.learnMoreButton)}&nbsp;
-                  
+
                 </Button>
               </Content>
             </StackItem>

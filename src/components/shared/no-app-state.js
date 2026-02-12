@@ -27,7 +27,7 @@ const renderButtons = (intl) => (
         href="https://www.redhat.com/en/technologies/management/ansible"
       >
         {intl.formatMessage(messages.learnMoreButton)} &nbsp;
-        
+
       </Button>
     </FlexItem>
   </Flex>

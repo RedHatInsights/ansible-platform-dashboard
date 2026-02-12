@@ -16,7 +16,7 @@ const renderAnalyticsConfigButton = (intl) => (
         href={`https://docs.ansible.com/ansible-tower/latest/html/administration/usability_data_collection.html`}
       >
         {intl.formatMessage(messages.configureAnalyticsLink)}&nbsp;
-        
+
       </Button>
     </FlexItem>
   </Flex>
