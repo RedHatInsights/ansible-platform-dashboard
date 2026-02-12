@@ -11,7 +11,7 @@ import {
   FlexItem,
   Label,
   Spinner,
-  Text,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
@@ -138,7 +138,7 @@ const AnalyticsCard = () => {
       <>
         <Flex className=" ans-l-flex ans-l-flex-automation-analytics-info">
           <FlexItem>
-            <Text>{intl.formatMessage(messages.analyticsCardDescription)}</Text>
+            <Content component="p">{intl.formatMessage(messages.analyticsCardDescription)}</Content>
             <br />
           </FlexItem>
           <FlexItem>

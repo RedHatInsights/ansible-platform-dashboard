@@ -16,9 +16,8 @@ import {
   Spinner,
   Stack,
   StackItem,
-  Text,
-  TextContent,
-  TextVariants,
+  Content,
+  ContentVariants,
   Title,
 } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
@@ -97,17 +96,17 @@ const HubCard = () => {
 
   const renderHubInfo = () => (
     <>
-      <TextContent>
-        <Text>
+      <Content>
+        <Content component="p">
           {intl.formatMessage(messages.hubCardDescription)} <br />
           <br />
-        </Text>
-      </TextContent>
+        </Content>
+      </Content>
       <Grid hasGutter>
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>{partners?.meta?.count}</Text>
-          </TextContent>
+          <Content>
+            <Content component={ContentVariants.h1}>{partners?.meta?.count}</Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Button
@@ -120,9 +119,9 @@ const HubCard = () => {
         </GridItem>
 
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>{collections?.meta?.count}</Text>
-          </TextContent>
+          <Content>
+            <Content component={ContentVariants.h1}>{collections?.meta?.count}</Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Button
@@ -135,11 +134,11 @@ const HubCard = () => {
         </GridItem>
 
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>
+          <Content>
+            <Content component={ContentVariants.h1}>
               {syncCollections?.meta?.count}
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Level hasGutter className="pf-v5-u-pl-md pf-v5-u-pt-sm">
@@ -231,21 +230,21 @@ const HubCard = () => {
                 {featuredCollection?.latest_version?.name ||
                   featuredCollection?.name}
               </Button>
-              <TextContent>
-                <Text component={TextVariants.small}>
+              <Content>
+                <Content component={ContentVariants.small}>
                   {' '}
                   Provided by{' '}
                   {featuredCollection?.namespace?.company ||
                     featuredCollection?.namespace?.name}
-                </Text>
-              </TextContent>
+                </Content>
+              </Content>
             </FlexItem>
             <FlexItem>
-              <TextContent>
-                <Text component={TextVariants.p}>
+              <Content>
+                <Content component={ContentVariants.p}>
                   {featuredCollection?.latest_version?.metadata?.description}
-                </Text>
-              </TextContent>
+                </Content>
+              </Content>
             </FlexItem>
             <FlexItem>
               <Grid hasGutter="md">
@@ -259,25 +258,25 @@ const HubCard = () => {
                   {content?.contents?.plugin || 0}
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.modules)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.roles)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.plugins)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
               </Grid>
             </FlexItem>
@@ -302,17 +301,17 @@ const HubCard = () => {
               </Title>
             </StackItem>
             <StackItem>
-              <Text component={TextVariants.p}>
+              <Content component={ContentVariants.p}>
                 {intl.formatMessage(
                   messages.hubCardCertifiedCollectionDescription,
                 )}
-              </Text>
+              </Content>
             </StackItem>
             <StackItem>
-              <Text className="pf-v5-u-text-align-center">
+              <Content component="p" className="pf-v5-u-text-align-center">
                 <br />
                 <br />
-                <Button
+                <Button icon={<ExternalLinkAltIcon />}
                   component="a"
                   variant="link"
                   target="_blank"
@@ -323,9 +322,9 @@ const HubCard = () => {
                   }
                 >
                   {intl.formatMessage(messages.learnMoreButton)}&nbsp;
-                  <ExternalLinkAltIcon />
+                  
                 </Button>
-              </Text>
+              </Content>
             </StackItem>
           </Stack>
         </FlexItem>

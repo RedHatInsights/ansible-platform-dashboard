@@ -1,5 +1,5 @@
 import '@patternfly/pfe-icon';
-import NotificationsPortal from '@redhat-cloud-services/frontend-components-notifications/NotificationPortal';
+import NotificationsProvider from '@redhat-cloud-services/frontend-components-notifications/NotificationsProvider';
 import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
 import React, { Suspense, useEffect, useState } from 'react';
 // react-int eng locale data
@@ -39,12 +39,11 @@ const App = () => {
     >
       <Suspense fallback={<AppPlaceholder />}>
         <IntlProvider locale="en">
-          <>
-            <NotificationsPortal />
-            <section className="ans-c-dashboard pf-v5-c-page__main-section pf-v5-l-page__main-section pf-v5-u-p-0 pf-v5-u-ml-0">
+          <NotificationsProvider>
+            <section className="ans-c-dashboard pf-v6-c-page__main-section pf-v6-l-page__main-section pf-v6-u-p-0 pf-v6-u-ml-0">
               <Routes />
             </section>
-          </>
+          </NotificationsProvider>
         </IntlProvider>
       </Suspense>
     </UserContext.Provider>

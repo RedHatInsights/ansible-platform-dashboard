@@ -37,7 +37,7 @@ const PlatformPage = () => {
         title={intl.formatMessage(messages.overview)}
         description={''}
       />
-      <PageSection>
+      <PageSection hasBodyWrapper={false}>
         <Stack hasGutter="md">
           <StackItem>
             <AnalyticsCard />
