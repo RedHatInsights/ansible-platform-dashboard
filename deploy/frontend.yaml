@@ -1,7 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/RedHatInsights/frontend-components/refs/heads/master/packages/config-utils/src/feo/spec/frontend-crd.schema.json
+
 apiVersion: v1
 kind: Template
 metadata:
   name: ansible-platform-dashboard-frontend
+parameters:
+  - name: ENV_NAME
+    required: true
+  - name: IMAGE_TAG
+    required: true
+  - name: IMAGE
+    value: quay.io/redhat-services-prod/ansible-automationhu-tenant/ansible-dashboard/ansible-platform-dashboard
 objects:
   - apiVersion: cloud.redhat.com/v1alpha1
     kind: Frontend
@@ -11,33 +20,65 @@ objects:
       envName: ${ENV_NAME}
       title: ansible-dashboard
       deploymentRepo: https://github.com/RedHatInsights/ansible-platform-dashboard
+      image: ${IMAGE}:${IMAGE_TAG}
+      feoConfigEnabled: true
+
+      # API catalog configuration
       API:
         versions:
           - v1
+
+      # Frontend assets configuration
       frontend:
         paths:
           - /apps/ansible-dashboard
-      image: ${IMAGE}:${IMAGE_TAG}
-      navItems:
-        - id: "overview"
-          appId: "ansibleDashboard"
-          title: "Overview"
-          filterable: false
-          href: "/ansible/ansible-dashboard"
-          icon: "AnsibleIcon"
+
+      # Module configuration
       module:
-        manifestLocation: "/apps/ansible-dashboard/fed-mods.json"
+        manifestLocation: /apps/ansible-dashboard/fed-mods.json
+        defaultDocumentTitle: Overview | Red Hat Ansible Automation Platform
         modules:
-          - id: "ansible-dashboard"
-            module: "./RootApp"
+          - id: ansible-dashboard
+            module: ./RootApp
             routes:
               - pathname: /ansible
+                exact: true
+                props:
+                  bundle: ansible
               - pathname: /ansible/ansible-dashboard
+                props:
+                  bundle: ansible
 
-parameters:
-  - name: ENV_NAME
-    required: true
-  - name: IMAGE_TAG
-    required: true
-  - name: IMAGE
-    value: quay.io/cloudservices/ansible-platform-dashboard
+      # Navigation configuration via bundle segments
+      bundleSegments:
+        - segmentId: ansible-dashboard-nav
+          bundleId: ansible
+          position: 100
+          navItems:
+            - id: overview
+              title: Overview
+              href: /ansible/ansible-dashboard
+              product: Ansible Automation Platform
+              icon: AnsibleIcon
+
+      # Service tiles for services dropdown
+      serviceTiles:
+        - id: ansible-dashboard
+          section: platform
+          group: automation
+          title: Overview
+          href: /ansible/ansible-dashboard
+          description: Dashboard overview for Ansible Automation Platform
+          icon: AnsibleIcon
+
+      # Search entries for global search
+      searchEntries:
+        - id: ansible-dashboard
+          title: Overview
+          href: /ansible/ansible-dashboard
+          description: Dashboard overview for Ansible Automation Platform
+          alt_title:
+            - Ansible overview
+            - Ansible trial
+            - Ansible Dashboard
+            - Ansible Automation Platform Dashboard
