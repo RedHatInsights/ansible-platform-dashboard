@@ -141,5 +141,5 @@ export const is404Error = (error) => {
  * @returns {boolean} True if network error
  */
 export const isNetworkError = (error) => {
-  return !error.response && error.message === 'Network Error';
+  return Boolean(error && !error.response && error.message === 'Network Error');
 };
