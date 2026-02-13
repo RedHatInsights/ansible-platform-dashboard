@@ -11,7 +11,7 @@ import {
   FlexItem,
   Label,
   Spinner,
-  Text,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import InfoCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/info-circle-icon';
@@ -29,6 +29,7 @@ import {
   fetchWarningNotifications,
 } from '../../redux/actions/analytics-actions';
 import { release } from '../../utilities/app-history';
+import { useNotifications } from '@redhat-cloud-services/frontend-components-notifications/hooks';
 import ErrorCard from '../shared/error-card';
 import ConfigureAnalyticsCard from './configure-analytics-card';
 import JobsChart from './jobs-chart';
@@ -81,16 +82,40 @@ const AnalyticsCard = () => {
 
   const dispatch = useDispatch();
   const intl = useIntl();
+  const { addNotification } = useNotifications();
 
   useEffect(() => {
-    stateDispatch({ type: 'setFetching', payload: true });
-    Promise.all([
-      dispatch(fetchClusters()),
-      dispatch(fetchErrorNotifications()),
-      dispatch(fetchWarningNotifications()),
-      dispatch(fetchJobsData()),
-    ]).then(() => stateDispatch({ type: 'setFetching', payload: false }));
-  }, []);
+    const loadAnalyticsData = async () => {
+      stateDispatch({ type: 'setFetching', payload: true });
+
+      const results = await Promise.all([
+        dispatch(fetchClusters()),
+        dispatch(fetchErrorNotifications()),
+        dispatch(fetchWarningNotifications()),
+        dispatch(fetchJobsData()),
+      ]);
+
+      // Check if any requests failed (excluding 404s which are handled by availability flags)
+      const failures = results.filter(
+        result => !result.success && result.error?.status !== 404
+      );
+
+      if (failures.length > 0) {
+        // Show notification only for unexpected errors (not 404s)
+        const firstError = failures[0].error;
+        addNotification({
+          dismissable: true,
+          title: firstError.title,
+          description: firstError.description,
+          variant: 'danger',
+        });
+      }
+
+      stateDispatch({ type: 'setFetching', payload: false });
+    };
+
+    loadAnalyticsData();
+  }, [dispatch, addNotification]);
 
   const renderAnalyticsNotifications = () => {
     return (
@@ -138,7 +163,7 @@ const AnalyticsCard = () => {
       <>
         <Flex className=" ans-l-flex ans-l-flex-automation-analytics-info">
           <FlexItem>
-            <Text>{intl.formatMessage(messages.analyticsCardDescription)}</Text>
+            <Content component="p">{intl.formatMessage(messages.analyticsCardDescription)}</Content>
             <br />
           </FlexItem>
           <FlexItem>

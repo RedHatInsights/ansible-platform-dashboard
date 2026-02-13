@@ -1,13 +1,13 @@
 import {
-  Chart,
-  ChartAxis,
-  ChartBar,
-  ChartStack,
-  ChartTooltip,
-} from '@patternfly/react-charts';
+	Chart,
+	ChartAxis,
+	ChartBar,
+	ChartStack,
+	ChartTooltip
+} from '@patternfly/react-charts/victory';
 import c_content_small_FontSize from '@patternfly/react-tokens/dist/js/c_content_small_FontSize';
 import chart_color_green_400 from '@patternfly/react-tokens/dist/js/chart_color_green_400';
-import chart_color_red_300 from '@patternfly/react-tokens/dist/js/chart_color_red_300';
+import chart_color_red_orange_300 from '@patternfly/react-tokens/dist/js/t_chart_color_red_orange_300';
 import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import messages from '../../messages/messages';
@@ -65,7 +65,7 @@ const JobsChart = (data) => {
     return (
       <ChartBar
         data={failBars}
-        style={{ fill: chart_color_red_300.value }}
+        style={{ fill: chart_color_red_orange_300.value }}
         labelComponent={<ChartTooltip constrainToVisibleArea />}
       />
     );
@@ -82,7 +82,7 @@ const JobsChart = (data) => {
   };
 
   const colorScaleArray = [
-    chart_color_red_300.value,
+    chart_color_red_orange_300.value,
     chart_color_green_400.value,
   ];
 

@@ -1,4 +1,4 @@
-@import '~@patternfly/patternfly/sass-utilities/_all.scss';
+@import '~@patternfly/patternfly/sass-utilities/_index.scss';
 
 $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
 
@@ -7,20 +7,20 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
   --ins-c-marketing-banner--before--BackgroundSize: #{pf-size-prem(300px)};
 
   --ins-c-marketing-banner--PaddingTop: var(
-    --pf-c-page__main-section--PaddingTop,
-    var(--pf-global--spacer--2xl)
+    --pf-v6-c-page__main-section--PaddingTop,
+    var(--pf-t--global--spacer--2xl)
   );
   --ins-c-marketing-banner--PaddingRight: var(
-    --pf-c-page__main-section--PaddingRight,
-    var(--pf-global--spacer--md)
+    --pf-v6-c-page__main-section--PaddingRight,
+    var(--pf-t--global--spacer--md)
   );
   --ins-c-marketing-banner--PaddingBottom: var(
-    --pf-c-page__main-section--PaddingBottom,
-    var(--pf-global--spacer--2xl)
+    --pf-v6-c-page__main-section--PaddingBottom,
+    var(--pf-t--global--spacer--2xl)
   );
   --ins-c-marketing-banner--PaddingLeft: var(
-    --pf-c-page__main-section--PaddingLeft,
-    var(--pf-global--spacer--md)
+    --pf-v6-c-page__main-section--PaddingLeft,
+    var(--pf-t--global--spacer--md)
   );
 
   --ins-c-marketing-banner--before--content--width: 2fr;
@@ -38,15 +38,15 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
     )
     var(--ins-c-marketing-banner--before--graphic--width);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--lg) {
     --ins-c-marketing-banner--before--Opacity: 0.65;
   }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--2xl) {
+  @media screen and (min-width: $pf-v6-global--breakpoint--2xl) {
     --ins-c-marketing-banner--before--Opacity: 1;
   }
 
-  @include pf-v5-build-css-variable-stack(
+  @include pf-v6-build-css-variable-stack(
     '--ins-c-marketing-banner--before--graphic--width',
     '--ins-c-marketing-banner--graphic--width',
     $ins-c-marketing-banner--breakpoint-map
@@ -54,7 +54,7 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
 
   &.ans-m-with-graphic {
     &:not(.pf-m-limit-width),
-    .pf-c-page__main-body {
+    .pf-v6-c-page__main-body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: 'content';
@@ -62,7 +62,7 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
       padding-top: var(--ins-c-marketing-banner--PaddingTop);
       padding-bottom: var(--ins-c-marketing-banner--PaddingBottom);
 
-      @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+      @media screen and (min-width: $pf-v6-global--breakpoint--md) {
         grid-template-areas: var(
           --ins-c-marketing-banner--m-with-graphic--GridTemplateAreas
         );
@@ -90,7 +90,7 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
         background-position-y: -8px;
         opacity: var(--ins-c-marketing-banner--before--Opacity);
 
-        @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+        @media screen and (min-width: $pf-v6-global--breakpoint--md) {
           grid-area: graphic;
         }
       }
@@ -115,7 +115,7 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
     );
     --ins-c-marketing-banner--before--Offset--left: 0;
 
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v6-global--breakpoint--md) {
       --ins-c-marketing-banner--m-with-graphic--GridTemplateAreas: var(
         --ins-c-marketing-banner--m-graphic-right--GridTemplateAreas
       );
@@ -125,21 +125,21 @@ $ins-c-marketing-banner--breakpoint-map: build-breakpoint-map();
     }
   }
 
-  &[class*='pf-m-light-'].pf-c-page__main-section {
-    .pf-c-button.pf-m-primary {
+  &[class*='pf-m-light-'].pf-v6-c-page__main-section {
+    .pf-v6-c-button.pf-m-primary {
       color: white;
-      background-color: #{$pf-v5-color-blue-400};
+      background-color: var(--pf-t--global--color--brand--default);
 
       &:hover,
       &:focus,
       &:active {
         color: white;
-        background-color: #{$pf-v5-color-blue-500};
+        background-color: var(--pf-t--global--color--brand--hover);
       }
     }
 
-    .pf-c-button.pf-m-secondary,
-    .pf-c-button.pf-m-tertiary {
+    .pf-v6-c-button.pf-m-secondary,
+    .pf-v6-c-button.pf-m-tertiary {
       &::after {
         border: 0;
       }

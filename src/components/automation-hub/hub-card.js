@@ -16,9 +16,8 @@ import {
   Spinner,
   Stack,
   StackItem,
-  Text,
-  TextContent,
-  TextVariants,
+  Content,
+  ContentVariants,
   Title,
 } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
@@ -36,6 +35,7 @@ import {
 } from '../../redux/actions/hub-actions';
 import UserContext from '../../user-context';
 import { release } from '../../utilities/app-history';
+import { useNotifications } from '@redhat-cloud-services/frontend-components-notifications/hooks';
 import ErrorCard from '../shared/error-card';
 import { contentCounts } from './content-counts';
 import { Logo } from './logo';
@@ -73,41 +73,82 @@ const HubCard = () => {
 
   const dispatch = useDispatch();
   const intl = useIntl();
+  const { addNotification } = useNotifications();
 
   useEffect(() => {
-    stateDispatch({ type: 'setFetching', payload: true });
-    Promise.all([
-      dispatch(fetchCollections()),
-      dispatch(fetchPartners()),
-      dispatch(fetchSyncCollections(userIdentity?.identity?.account_number)),
-    ]).then(() => stateDispatch({ type: 'setFetching', payload: false }));
-  }, []);
-
-  useEffect(() => {
-    if (collections?.meta?.count > 0) {
-      const d = new Date();
-      const day = d.getDate();
-      const count = collections?.meta?.count;
+    const loadHubData = async () => {
       stateDispatch({ type: 'setFetching', payload: true });
-      dispatch(fetchCollection(count <= day ? count - 1 : day - 1)).then(() =>
-        stateDispatch({ type: 'setFetching', payload: false }),
+
+      const results = await Promise.all([
+        dispatch(fetchCollections()),
+        dispatch(fetchPartners()),
+        dispatch(fetchSyncCollections(userIdentity?.identity?.account_number)),
+      ]);
+
+      // Check if any requests failed (excluding 404s which are handled by availability flags)
+      const failures = results.filter(
+        result => !result.success && result.error?.status !== 404
       );
-    }
-  }, [collections]);
+
+      if (failures.length > 0) {
+        // Show notification only for unexpected errors (not 404s)
+        const firstError = failures[0].error;
+        addNotification({
+          dismissable: true,
+          title: firstError.title,
+          description: firstError.description,
+          variant: 'danger',
+        });
+      }
+
+      stateDispatch({ type: 'setFetching', payload: false });
+    };
+
+    loadHubData();
+  }, [dispatch, userIdentity?.identity?.account_number, addNotification]);
+
+  useEffect(() => {
+    const loadFeaturedCollection = async () => {
+      if (collections?.meta?.count > 0) {
+        const d = new Date();
+        const day = d.getDate();
+        const count = collections?.meta?.count;
+        const offset = count <= day ? count - 1 : day - 1;
+
+        stateDispatch({ type: 'setFetching', payload: true });
+
+        const result = await dispatch(fetchCollection(offset));
+
+        // Only show notification for unexpected errors (not 404s)
+        if (!result.success && result.error?.status !== 404) {
+          addNotification({
+            dismissable: true,
+            title: result.error.title,
+            description: result.error.description,
+            variant: 'danger',
+          });
+        }
+
+        stateDispatch({ type: 'setFetching', payload: false });
+      }
+    };
+
+    loadFeaturedCollection();
+  }, [collections, dispatch, addNotification]);
 
   const renderHubInfo = () => (
     <>
-      <TextContent>
-        <Text>
+      <Content>
+        <Content component="p">
           {intl.formatMessage(messages.hubCardDescription)} <br />
           <br />
-        </Text>
-      </TextContent>
+        </Content>
+      </Content>
       <Grid hasGutter>
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>{partners?.meta?.count}</Text>
-          </TextContent>
+          <Content>
+            <Content component={ContentVariants.h1}>{partners?.meta?.count}</Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Button
@@ -120,9 +161,9 @@ const HubCard = () => {
         </GridItem>
 
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>{collections?.meta?.count}</Text>
-          </TextContent>
+          <Content>
+            <Content component={ContentVariants.h1}>{collections?.meta?.count}</Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Button
@@ -135,11 +176,11 @@ const HubCard = () => {
         </GridItem>
 
         <GridItem align="right" span={2}>
-          <TextContent>
-            <Text component={TextVariants.h1}>
+          <Content>
+            <Content component={ContentVariants.h1}>
               {syncCollections?.meta?.count}
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </GridItem>
         <GridItem span={10}>
           <Level hasGutter className="pf-v5-u-pl-md pf-v5-u-pt-sm">
@@ -231,21 +272,21 @@ const HubCard = () => {
                 {featuredCollection?.latest_version?.name ||
                   featuredCollection?.name}
               </Button>
-              <TextContent>
-                <Text component={TextVariants.small}>
+              <Content>
+                <Content component={ContentVariants.small}>
                   {' '}
                   Provided by{' '}
                   {featuredCollection?.namespace?.company ||
                     featuredCollection?.namespace?.name}
-                </Text>
-              </TextContent>
+                </Content>
+              </Content>
             </FlexItem>
             <FlexItem>
-              <TextContent>
-                <Text component={TextVariants.p}>
+              <Content>
+                <Content component={ContentVariants.p}>
                   {featuredCollection?.latest_version?.metadata?.description}
-                </Text>
-              </TextContent>
+                </Content>
+              </Content>
             </FlexItem>
             <FlexItem>
               <Grid hasGutter="md">
@@ -259,25 +300,25 @@ const HubCard = () => {
                   {content?.contents?.plugin || 0}
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.modules)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.roles)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
                 <GridItem span="4">
-                  <TextContent>
-                    <Text component={TextVariants.p}>
+                  <Content>
+                    <Content component={ContentVariants.p}>
                       {intl.formatMessage(messages.plugins)}
-                    </Text>
-                  </TextContent>
+                    </Content>
+                  </Content>
                 </GridItem>
               </Grid>
             </FlexItem>
@@ -302,17 +343,17 @@ const HubCard = () => {
               </Title>
             </StackItem>
             <StackItem>
-              <Text component={TextVariants.p}>
+              <Content component={ContentVariants.p}>
                 {intl.formatMessage(
                   messages.hubCardCertifiedCollectionDescription,
                 )}
-              </Text>
+              </Content>
             </StackItem>
             <StackItem>
-              <Text className="pf-v5-u-text-align-center">
+              <Content component="p" className="pf-v5-u-text-align-center">
                 <br />
                 <br />
-                <Button
+                <Button icon={<ExternalLinkAltIcon />}
                   component="a"
                   variant="link"
                   target="_blank"
@@ -323,9 +364,9 @@ const HubCard = () => {
                   }
                 >
                   {intl.formatMessage(messages.learnMoreButton)}&nbsp;
-                  <ExternalLinkAltIcon />
+
                 </Button>
-              </Text>
+              </Content>
             </StackItem>
           </Stack>
         </FlexItem>

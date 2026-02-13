@@ -24,4 +24,5 @@ core
 *.sw[po]
 *~
 
+.claude
 translations/

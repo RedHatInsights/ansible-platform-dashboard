@@ -11,10 +11,7 @@ import {
   PageSection,
   Stack,
   StackItem,
-  Text,
-  TextContent,
-  TextList,
-  TextListItem,
+  Content,
   Title,
 } from '@patternfly/react-core';
 import CheckCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/check-circle-icon';
@@ -37,17 +34,17 @@ const Overview = () => {
     activeFaq === index ? openFaq(undefined) : openFaq(index);
 
   const createAccordionItem = (index, values) => (
-    <AccordionItem>
+    <AccordionItem isExpanded={activeFaq === index}>
       <AccordionToggle
-        isExpanded={activeFaq === index}
+
         onClick={onClick(index)}
       >
         {intl.formatMessage(trialMessages[`faq${index}a`])}
       </AccordionToggle>
-      <AccordionContent isHidden={activeFaq !== index}>
-        <TextContent>
+      <AccordionContent >
+        <Content>
           {intl.formatMessage(trialMessages[`faq${index}b`], values)}
-        </TextContent>
+        </Content>
       </AccordionContent>
     </AccordionItem>
   );
@@ -58,15 +55,15 @@ const Overview = () => {
         title={intl.formatMessage(messages.overview)}
         description={''}
       />
-      <PageSection className="pf-u-pt-0 pf-u-mt-xs">
+      <PageSection hasBodyWrapper={false} className="pf-u-pt-0 pf-u-mt-xs">
         <Stack hasGutter="md">
           <StackItem className="ans-c-trial__hero pf-u-pt-xl pf-u-pb-xl pf-u-pl-md pf-u-mb-0">
             <Title headingLevel="h1" size="xl" className="pf-u-mb-md">
               {intl.formatMessage(trialMessages.header)}
             </Title>
-            <TextContent className="pf-u-mb-lg ans-c-trial__hero__description">
-              <Text>{intl.formatMessage(trialMessages.description)}</Text>
-            </TextContent>
+            <Content className="pf-u-mb-lg ans-c-trial__hero__description">
+              <Content component="p">{intl.formatMessage(trialMessages.description)}</Content>
+            </Content>
             <Button className="pf-u-px-xl" component="a" href={url}>
               {intl.formatMessage(trialMessages.startButton)}
             </Button>
@@ -90,7 +87,7 @@ const Overview = () => {
                             />
                           </div>
                           <div style={{ flexGrow: 1, alignSelf: 'center' }}>
-                            <Text>{chunks}</Text>
+                            <Content component="p">{chunks}</Content>
                           </div>
                         </div>
                       </StackItem>
@@ -99,20 +96,20 @@ const Overview = () => {
                 </Stack>
               </CardBody>
               <CardFooter>
-                <TextContent>
-                  <Text component="small">
+                <Content>
+                  <Content component="small">
                     {intl.formatMessage(trialMessages.adCardFooter, {
                       a: (chunks) => (
-                        <Text
+                        <Content
                           component="a"
                           href={`${window.location.origin}${window.location.pathname}#trial-terms`}
                         >
                           {chunks}
-                        </Text>
+                        </Content>
                       ),
                     })}
-                  </Text>
-                </TextContent>
+                  </Content>
+                </Content>
               </CardFooter>
             </Card>
           </StackItem>
@@ -137,9 +134,9 @@ const Overview = () => {
               })}
               {createAccordionItem(2)}
               {createAccordionItem(3, {
-                p: (chunks) => <Text>{chunks}</Text>,
-                ul: (chunks) => <TextList>{chunks}</TextList>,
-                li: (chunks) => <TextListItem>{chunks}</TextListItem>,
+                p: (chunks) => <Content component="p">{chunks}</Content>,
+                ul: (chunks) => <Content component="ul">{chunks}</Content>,
+                li: (chunks) => <Content component="li">{chunks}</Content>,
                 a: (chunks) => (
                   <Link link="https://docs.redhat.com/en/products">
                     {chunks}
@@ -166,9 +163,9 @@ const Overview = () => {
                 ),
               })}
               {createAccordionItem(7, {
-                p: (chunks) => <Text>{chunks}</Text>,
-                ol: (chunks) => <TextList component="ol">{chunks}</TextList>,
-                li: (chunks) => <TextListItem>{chunks}</TextListItem>,
+                p: (chunks) => <Content component="p">{chunks}</Content>,
+                ol: (chunks) => <Content component="ol">{chunks}</Content>,
+                li: (chunks) => <Content component="li">{chunks}</Content>,
                 a: (chunks) => (
                   <Link link="http://www.redhat.com/en/contact">
                     {chunks}
@@ -183,8 +180,8 @@ const Overview = () => {
                 ),
               })}
               {createAccordionItem(9, {
-                ul: (chunks) => <TextList>{chunks}</TextList>,
-                li: (chunks) => <TextListItem>{chunks}</TextListItem>,
+                ul: (chunks) => <Content component="ul">{chunks}</Content>,
+                li: (chunks) => <Content component="li">{chunks}</Content>,
                 a: (chunks) => (
                   <Link link="http://www.redhat.com/en/contact">
                     {chunks}
@@ -202,15 +199,15 @@ const Overview = () => {
             >
               {intl.formatMessage(trialMessages.footerTitle)}
             </Title>
-            <TextContent className="pf-u-font-size-sm">
+            <Content className="pf-u-font-size-sm">
               {intl.formatMessage(trialMessages.footerContent, {
-                p: (chunks) => <Text>{chunks}</Text>,
+                p: (chunks) => <Content component="p">{chunks}</Content>,
                 ul: (chunks) => (
-                  <TextList className="pf-u-ml-0">{chunks}</TextList>
+                  <Content component="ul" className="pf-u-ml-0">{chunks}</Content>
                 ),
-                li: (chunks) => <TextListItem>{chunks}</TextListItem>,
+                li: (chunks) => <Content component="li">{chunks}</Content>,
               })}
-            </TextContent>
+            </Content>
           </StackItem>
         </Stack>
       </PageSection>
