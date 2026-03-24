@@ -11,8 +11,63 @@ import {
 import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
 import ExternalLinkIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import React from 'react';
-import { useIntl } from 'react-intl';
-import successMessages from '../../messages/success.messages';
+import { defineMessages, useIntl } from 'react-intl';
+
+const resourceMessages = defineMessages({
+  resources: {
+    id: 'success.resources',
+    defaultMessage: 'Helpful resources',
+  },
+  resourcesDescription: {
+    id: 'success.resourcesDescription',
+    defaultMessage:
+      'To make the most of your product trial, check out these resources.',
+  },
+  instructionsText: {
+    id: 'success.instructionsText',
+    defaultMessage:
+      'Get requirements and recommended steps for your installation.',
+  },
+  instructionsLink: {
+    id: 'success.instructionsLink',
+    defaultMessage: 'Read the installation instructions',
+  },
+  documentationText: {
+    id: 'success.documentationText',
+    defaultMessage:
+      'Find release notes, planning recommendations, and other guidance for your trial.',
+  },
+  documentationLink: {
+    id: 'success.documentationLink',
+    defaultMessage: 'Browse product documentation',
+  },
+  otherVersionsText: {
+    id: 'success.otherVersionsText',
+    defaultMessage:
+      "Find other versions and images of the Red Hat product you're trying.",
+  },
+  otherVersionsLink: {
+    id: 'success.otherVersionsLink',
+    defaultMessage: 'Access other downloads',
+  },
+  customerServiceText: {
+    id: 'success.customerServiceText',
+    defaultMessage:
+      "Get answers to questions about your trial or Red Hat products. (Note: Customer Service doesn't provide break/fix or triage support for self-supported product trials.)",
+  },
+  customerServiceLink: {
+    id: 'success.customrServiceLink',
+    defaultMessage: 'Contact Customer Service',
+  },
+  faqLink: {
+    id: 'success.faqLink',
+    defaultMessage: 'See product trial FAQs',
+  },
+  allTrials: {
+    id: 'success.allTrials',
+    defaultMessage: 'See all product trials',
+  },
+});
 
 const Resources = () => {
   const intl = useIntl();
@@ -21,17 +76,17 @@ const Resources = () => {
     <>
       <Content>
         <Title headingLevel="h2" size="xl">
-          {intl.formatMessage(successMessages.resources)}
+          {intl.formatMessage(resourceMessages.resources)}
         </Title>
         <Content component="p" className="pf-u-mb-lg">
-          {intl.formatMessage(successMessages.resourcesDescription)}
+          {intl.formatMessage(resourceMessages.resourcesDescription)}
         </Content>
       </Content>
       <Grid hasGutter>
         <GridItem md={6}>
           <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
-              {intl.formatMessage(successMessages.instructionsText)}
+              {intl.formatMessage(resourceMessages.instructionsText)}
             </CardBody>
             <CardFooter>
               <Button icon={<ArrowRightIcon />}
@@ -43,7 +98,7 @@ const Resources = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {intl.formatMessage(successMessages.instructionsLink)}{' '}
+                {intl.formatMessage(resourceMessages.instructionsLink)}{' '}
 
               </Button>
             </CardFooter>
@@ -52,7 +107,7 @@ const Resources = () => {
         <GridItem md={6}>
           <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
-              {intl.formatMessage(successMessages.documentationText)}
+              {intl.formatMessage(resourceMessages.documentationText)}
             </CardBody>
             <CardFooter>
               <Button icon={<ArrowRightIcon />}
@@ -64,7 +119,7 @@ const Resources = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {intl.formatMessage(successMessages.documentationLink)}{' '}
+                {intl.formatMessage(resourceMessages.documentationLink)}{' '}
 
               </Button>
             </CardFooter>
@@ -73,7 +128,7 @@ const Resources = () => {
         <GridItem md={6}>
           <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
-              {intl.formatMessage(successMessages.otherVersionsText)}
+              {intl.formatMessage(resourceMessages.otherVersionsText)}
             </CardBody>
             <CardFooter>
               <Button icon={<ArrowRightIcon />}
@@ -85,7 +140,7 @@ const Resources = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {intl.formatMessage(successMessages.otherVersionsLink)}{' '}
+                {intl.formatMessage(resourceMessages.otherVersionsLink)}{' '}
 
               </Button>
             </CardFooter>
@@ -94,7 +149,7 @@ const Resources = () => {
         <GridItem md={6}>
           <Card  className="pf-u-px-md pf-u-h-100">
             <CardBody>
-              {intl.formatMessage(successMessages.customerServiceText)}
+              {intl.formatMessage(resourceMessages.customerServiceText)}
             </CardBody>
             <CardFooter>
               <Button icon={<ArrowRightIcon />}
@@ -106,7 +161,7 @@ const Resources = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {intl.formatMessage(successMessages.customrServiceLink)}{' '}
+                {intl.formatMessage(resourceMessages.customerServiceLink)}{' '}
 
               </Button>
             </CardFooter>
@@ -123,7 +178,7 @@ const Resources = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {intl.formatMessage(successMessages.faqLink)}
+          {intl.formatMessage(resourceMessages.faqLink)}
         </Button>
         <Button
           variant="tertiary"
@@ -134,7 +189,7 @@ const Resources = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {intl.formatMessage(successMessages.allTrials)}
+          {intl.formatMessage(resourceMessages.allTrials)}
         </Button>
       </div>
     </>
