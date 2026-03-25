@@ -262,7 +262,7 @@ const HubCard = () => {
                 variant="link"
                 className="pf-v5-u-p-0"
                 href={
-                  `${release}ansible/automation-hub/repo/published/${featuredCollection?.namespace?.name}/` +
+                  `${release}ansible/automation-hub/collections/published/${featuredCollection?.namespace?.name}/` +
                   `${
                     featuredCollection?.latest_version?.name ||
                     featuredCollection?.name
