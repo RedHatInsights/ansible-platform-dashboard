@@ -61,6 +61,19 @@ objects:
               product: Ansible Automation Platform
               icon: AnsibleIcon
 
+      # Widget registry configuration
+      widgetRegistry:
+        - scope: landing
+          module: ./AnsibleWidget
+          config:
+            icon: AnsibleIcon
+            title: Ansible Automation Platform
+          defaults:
+            w: 1
+            h: 4
+            maxH: 10
+            minH: 1
+
       # Service tiles for services dropdown
       serviceTiles:
         - id: ansible-dashboard
