@@ -32,7 +32,7 @@
     "@babel/plugin-transform-runtime": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
-    "@redhat-cloud-services/frontend-components-config": "^6.7.51",
+    "@redhat-cloud-services/frontend-components-config": "^6.8.3",
     "@redhat-cloud-services/tsc-transform-imports": "^1.0.17",
     "@testing-library/jest-dom": "^6.5.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
