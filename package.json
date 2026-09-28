@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": false,
   "dependencies": {
-    "@patternfly/patternfly": "^6.0.0",
+    "@patternfly/patternfly": "^6.6.1",
     "@patternfly/pfe-icon": "^1.12.3",
-    "@patternfly/react-charts": "^8.0.0",
-    "@patternfly/react-core": "^6.0.0",
+    "@patternfly/react-charts": "^8.6.1",
+    "@patternfly/react-core": "^6.6.1",
     "@patternfly/react-icons": "^6.0.0",
     "@patternfly/react-tokens": "^6.0.0",
     "@redhat-cloud-services/frontend-components": "^7.0.40",
